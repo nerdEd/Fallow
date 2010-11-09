@@ -1,0 +1,26 @@
+<div class="altContainer shadowed rounded">
+  <h1>FallowFollow</h1>
+  
+  <p class="alignRight spaced">
+    Does someone you like to follow on twitter sometimes get to be too much?
+  </p>
+
+  <p class="alignLeft spaced">
+    Would you like to be able to follow someone only for a couple days?
+  </p>
+
+  <h1 class="alignCenter">No Problem!</h1>
+  
+  <% if !@current_user %>
+    <p>
+      Fallow Follow allows you to follow or unfollow any twitter user for an amount of time you specify. A day, a week, a month -- it doesn't matter, we'll take care of everything.
+    </p>
+    <br/>
+    <h2 class="alignCenter">To get started <a href="/auth/twitter">sign in with Twitter</a></h2>
+  <% else %>
+    <%= render :partial => 'furrows/form' %>
+    <br/><br/><br/>
+    <%= link_to 'logout', logout_path, :class => 'alignRight' %>
+  <% end %>
+  
+</div>

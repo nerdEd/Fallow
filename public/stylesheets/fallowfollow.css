@@ -1,0 +1,57 @@
+body {
+  background-image: url('/images/RedComposite.jpg');
+}
+
+.rounded {
+  border-radius: 10px;
+  -moz-border-radius: 15px;
+}
+
+.shadowed {
+  -moz-box-shadow: 5px 5px 6px #000;
+  -webkit-box-shadow: 5px 5px 6px #000;
+  box-shadow: 5px 5px 6px #000;
+}
+
+.altContainer {
+  width: 900px;
+  height: 600px;
+  margin: 70px auto;
+  padding: 20px;
+  background: white;				
+  font-family: 'Philosopher', arial, serif;
+}
+
+.altContainer h1, 
+.altContainer h2 {
+  color: #849913;
+}
+
+.altContainer h1 {
+  font-size: 48px;
+}
+
+.altContainer p {
+  font-size: 24px;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+a.alignRight {
+  display: block;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+p.spaced {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
