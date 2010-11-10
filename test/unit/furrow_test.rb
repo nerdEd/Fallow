@@ -28,4 +28,18 @@ class FurrowTest < ActiveSupport::TestCase
     furrow.start!
     assert furrow.started?
   end
+
+  test 'a furrow cannot exist if there is already a furrow for those users in the started or unstarted state' do
+    active_furrow = Factory(:follow_furrow, :state => 'started')
+    spare_furrow = Factory.build(:follow_furrow, :user => active_furrow.user, :seed_user => active_furrow.seed_user)
+
+    assert !spare_furrow.valid?
+  end
+
+  test 'a furrow can exist if there is already a furrow for those users but it is in the finished state' do
+    active_furrow = Factory(:follow_furrow, :state => 'finished')
+    spare_furrow = Factory.build(:follow_furrow, :user => active_furrow.user, :seed_user => active_furrow.seed_user)
+
+    assert spare_furrow.valid?
+  end
 end
