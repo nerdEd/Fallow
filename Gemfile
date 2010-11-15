@@ -5,6 +5,7 @@ gem 'pg'
 gem 'twitter'
 gem 'omniauth'
 gem 'transitions', :require => ["transitions", "active_record/transitions"]
+gem 'dynamic_form'
 
 # Deploy with Capistrano
 gem 'capistrano'
