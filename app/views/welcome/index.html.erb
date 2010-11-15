@@ -18,9 +18,15 @@
     <br/>
     <h2 class="alignCenter">To get started <a href="/auth/twitter">sign in with Twitter</a></h2>
   <% else %>
+    <% if flash[:notice] %>
+      <p id="notice">
+        <%= flash[:notice] %>
+      </p>
+    <% end %>
+
     <%= render :partial => 'furrows/form' %>
+
     <br/><br/><br/>
     <%= link_to 'logout', logout_path, :class => 'alignRight' %>
   <% end %>
-  
 </div>
