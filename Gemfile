@@ -14,6 +14,8 @@ group :test do
   gem 'mocha', :require => false
   gem 'factory_girl'
   gem 'turn'
+  gem 'vcr'
+  gem 'fakeweb'
 end
 
 group :test, :development do

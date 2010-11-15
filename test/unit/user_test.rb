@@ -18,17 +18,17 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'generating a user from a valid twitter nickname' do
-    stub_user_search('frankie01')
-    user = User.new_from_nickname('frankie01')
-    assert user.valid?
+    VCR.use_cassette('new_from_nickname') do
+      user = User.new_from_nickname('nerded')
+      assert user.valid?
+    end
   end
 
   test 'generating a user from a invalid twitter nickname' do
-    twitter_client = mock('twitter_client')
-    twitter_client.expects(:user).raises(Twitter::NotFound.new)
-    stub_client_creation(twitter_client)
-    user = User.new_from_nickname('fake_username')
-    assert !user.valid?
+    VCR.use_cassette('bad_new_from_nickname') do
+      user = User.new_from_nickname('fake_usernamexx892342kj')
+      assert !user.valid?
+    end
   end
 
   test 'a user should be invalid if its nickname is not unique' do
