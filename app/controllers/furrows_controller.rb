@@ -14,6 +14,7 @@ class FurrowsController < ApplicationController
 
     if(@furrow.save)
       flash[:notice] = "Great Success! You will now #{@furrow.action} @#{@furrow.seed_user.nickname} for #{@furrow.duration} day(s)"
+      @furrow.start!
       redirect_to root_path
     else
       @current_user = current_user

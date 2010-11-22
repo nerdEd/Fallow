@@ -32,7 +32,7 @@ class Furrow < ActiveRecord::Base
 private
 
   def start_furrow
-    user.follow(seed_user)
+    user.send(action.to_sym, seed_user)
   end
 
   def cannot_overlap_furrows
