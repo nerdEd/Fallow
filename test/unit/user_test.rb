@@ -24,6 +24,19 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'generating a user from a twitter nickname with the @ symbol' do
+    VCR.use_cassette('new_from_nickname') do
+      user = User.new_from_nickname('@nerded')
+      assert user.valid?
+    end
+  end
+
+  test 'generating a user from a twitter nickname when that user already exists' do
+    user = Factory(:user)
+    second_time = User.new_from_nickname(user.nickname)
+    assert second_time.valid?
+  end
+
   test 'generating a user from a invalid twitter nickname' do
     VCR.use_cassette('bad_new_from_nickname') do
       user = User.new_from_nickname('fake_usernamexx892342kj')

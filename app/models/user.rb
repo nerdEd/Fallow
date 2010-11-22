@@ -21,6 +21,11 @@ class User < ActiveRecord::Base
   def self.new_from_nickname(twitter_nickname)
     return unless twitter_nickname
 
+    twitter_nickname = twitter_nickname.delete '@'
+    
+    existing_user = User.find_by_nickname(twitter_nickname)
+    return existing_user if existing_user
+
     credentials = Twitter::OAuth.new(TWITTER_KEY, TWITTER_SECRET)
     client = Twitter::Base.new(credentials)
     user_details = client.user(twitter_nickname)

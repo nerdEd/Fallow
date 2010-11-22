@@ -11,33 +11,33 @@ class FurrowsControllerTest < ActionController::TestCase
 
     assert_redirected_to root_path
     furrow = Furrow.last
-    assert_select('#notice', "Great Success! You will now #{furrow.action} for #{furrow.duration} day(s)")
+    assert_equal flash[:notice], "Great Success! You will now #{furrow.action} @#{furrow.seed_user.nickname} for #{furrow.duration} day(s)"
   end
 
-  #test "post to create w/o a user logged in and a complete furrow form" do
-    #assert_difference ['Furrow.count', 'User.count'], 0 do
-      #post :create, valid_params
-    #end
+  test "post to create w/o a user logged in and a complete furrow form" do
+    assert_difference ['Furrow.count', 'User.count'], 0 do
+      post :create, valid_params
+    end
 
-    #assert_redirected_to root_path
-    #assert_select('#notice', 'Please sign in with Twitter')
-  #end
+    assert_redirected_to root_path
+    assert_select('#error', 'Please sign in with Twitter')
+  end
 
-  #test "post to create w/ a user logged in and a missing seed user name" do
-    #stub_logged_in
-    #stub_bad_user_create('bad_user')
+  test "post to create w/ a user logged in and a missing seed user name" do
+    stub_logged_in
+    stub_bad_user_create('bad_user')
 
-    #assert_difference ['Furrow.count', 'User.count'], 0 do
-      #post :create, valid_params
-    #end
+    assert_difference ['Furrow.count', 'User.count'], 0 do
+      post :create, valid_params
+    end
 
-    #assert_redirected_to root_path
-    #assert_select('#error', "Couldn't find twitter user named bad_user")
-  #end
+    assert_redirected_to root_path
+    assert_select('#error', "Couldn't find twitter user named bad_user")
+  end
 
-  #test "post to create w/o a user logged in and a incomplete furrow form" do
+  test "post to create w/o a user logged in and a incomplete furrow form" do
 
-  #end
+  end
 
   def stub_new_from_nickname 
     User.expects(:new_from_nickname).once.returns(Factory(:user))

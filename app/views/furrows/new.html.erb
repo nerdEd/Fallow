@@ -20,11 +20,13 @@
   <% else %>
     <% if flash[:notice] %>
       <p id="notice">
-        <%= flash[:notice] %>
+        <%= notice %>
       </p>
     <% end %>
 
-    <%= render :partial => 'furrows/form' %>
+    <div class="alignCenter">
+      <%= render :partial => 'furrows/form' %>
+    </div>
 
     <br/><br/><br/>
     <%= link_to 'logout', logout_path, :class => 'alignRight' %>

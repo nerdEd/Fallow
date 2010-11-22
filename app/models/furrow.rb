@@ -7,11 +7,13 @@ class Furrow < ActiveRecord::Base
   validates_presence_of :user
   validates_presence_of :seed_user
   validates_presence_of :state
+  validates_presence_of :duration
+  
+  validates_numericality_of :duration
 
   validate :user_and_seed_user_cannot_be_the_same
   validate :cannot_overlap_furrows
-
-  attr_accessor :duration
+  validate :must_have_seed_user
 
   state_machine do
     state :unstarted # first one is initial state
@@ -41,5 +43,9 @@ private
 
   def user_and_seed_user_cannot_be_the_same
     errors.add(:base, 'Users must be different') if user == seed_user
+  end
+
+  def must_have_seed_user
+    errors.add(:base, 'Twitter user must be a valid twitter user') unless seed_user.valid?
   end
 end

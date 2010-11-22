@@ -1,6 +1,7 @@
 Factory.define :furrow do |f|
   f.association :user
   f.association :seed_user
+  f.duration 5
 end
 
 Factory.define :follow_furrow, :parent => :furrow do |f|

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   
   def require_user
     unless current_user
-      flash[:notice] = 'Plase sign in with Twitter'
+      flash[:error] = 'Plase sign in with Twitter'
       redirect_to root_path
     end
   end

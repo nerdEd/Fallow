@@ -17,6 +17,11 @@ class FurrowTest < ActiveSupport::TestCase
     assert !furrow.valid?
   end
 
+  test 'a furrow should be invalid if the duration is blank' do
+    furrow = Factory.build(:furrow, :duration => nil)
+    assert !furrow.valid?
+  end
+
   test 'a valid new furrow should be in the "unstarted" state' do
     furrow = Factory.build(:furrow)
     assert furrow.valid?
