@@ -9,7 +9,7 @@ class Furrow < ActiveRecord::Base
   validates_presence_of :state
   validates_presence_of :duration
   
-  validates_numericality_of :duration
+  validates_numericality_of :duration, :only_integer => true, :greater_than => 0
 
   validate :user_and_seed_user_cannot_be_the_same
   validate :cannot_overlap_furrows
