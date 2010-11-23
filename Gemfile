@@ -21,8 +21,3 @@ end
 group :test, :development do
   gem 'ruby-debug19'
 end
-
-group :development do
-  gem 'heroku'
-  gem 'spatula'
-end
