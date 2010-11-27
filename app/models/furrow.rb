@@ -57,6 +57,6 @@ private
   end
 
   def must_have_seed_user
-    errors.add(:base, 'Twitter user must be a valid twitter user') unless seed_user.valid?
+    errors.add(:base, 'Twitter user must be a valid twitter user') unless seed_user && seed_user.valid?
   end
 end
