@@ -2,7 +2,7 @@ require 'bundler/capistrano'
 require 'rvm/capistrano'
 
 set :application, "fallow"
-set :repository,  "git@github.com:nerdEd/FallowFollow.git"
+set :repository,  "git@github.com:nerdEd/Fallow.git"
 
 set :deploy_via, :copy
 set :scm, :git
