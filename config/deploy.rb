@@ -34,6 +34,7 @@ namespace :custom do
 
   task :remove_config_ru, :roles => :app do
     run "rm -f #{release_path}/config.ru"
+    run "rm -f #{release_path}/.rvmrc"
   end
 end
 
