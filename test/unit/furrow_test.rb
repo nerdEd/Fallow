@@ -41,6 +41,11 @@ class FurrowTest < ActiveSupport::TestCase
     assert !spare_furrow.valid?
   end
 
+  test 'a furrow is invalid with an action of anything other than follow or unfollow' do
+    furrow = Factory.build(:furrow, :action => 'fuck')
+    assert !furrow.valid?
+  end
+
   test 'a furrow can exist if there is already a furrow for those users but it is in the finished state' do
     active_furrow = Factory(:follow_furrow, :state => 'finished')
     spare_furrow = Factory.build(:follow_furrow, :user => active_furrow.user, :seed_user => active_furrow.seed_user)

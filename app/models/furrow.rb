@@ -8,8 +8,11 @@ class Furrow < ActiveRecord::Base
   validates_presence_of :seed_user
   validates_presence_of :state
   validates_presence_of :duration
-  
+  validates_presence_of :action
+
   validates_numericality_of :duration, :only_integer => true, :greater_than => 0
+
+  validates_inclusion_of :action, :in => %w(follow unfollow)
 
   validate :user_and_seed_user_cannot_be_the_same
   validate :cannot_overlap_furrows
