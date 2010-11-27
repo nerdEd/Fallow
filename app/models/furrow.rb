@@ -32,6 +32,14 @@ class Furrow < ActiveRecord::Base
     where("state = ? OR state = ?", 'started', 'unstarted')
   end
 
+  def self.started
+    where("state = ?", 'started')
+  end
+
+  def self.due_for_completion
+    started.where("extract(DAY FROM current_date - created_at) >= duration")
+  end
+
 private
 
   def start_furrow

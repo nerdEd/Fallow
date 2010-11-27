@@ -52,4 +52,21 @@ class FurrowTest < ActiveSupport::TestCase
 
     assert spare_furrow.valid?
   end
+
+  test 'finding furrows that are ready to be finished when none are ready for completion' do
+    3.times do Factory(:follow_furrow) end
+    complete_furrows = Furrow.due_for_completion
+
+    assert_equal 0, complete_furrows.size
+  end
+
+  test 'finding furrows that are ready to be finished when some are ready' do
+    Timecop.freeze(Date.today - 5) do
+      3.times do Factory(:started_follow_furrow, :duration => 3, :created_at => Date.today) end
+      Factory(:started_follow_furrow, :duration => 6, :created_at => Date.today)
+    end
+
+    assert_equal 3, Furrow.due_for_completion.count
+  end
+
 end
