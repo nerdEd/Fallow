@@ -16,6 +16,7 @@ group :test do
   gem 'turn'
   gem 'vcr'
   gem 'fakeweb'
+  gem 'timecop'
 end
 
 group :test, :development do
