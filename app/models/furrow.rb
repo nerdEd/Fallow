@@ -24,7 +24,11 @@ class Furrow < ActiveRecord::Base
     state :finished
 
     event :start do
-     transitions :to => :started, :from => [:unstarted], :on_transition => :start_furrow
+      transitions :to => :started, :from => [:unstarted], :on_transition => :start_furrow
+    end
+
+    event :finish do
+      transitions :to => :finished, :from => [:started], :on_transition => :finish_furrow
     end
   end  
 
@@ -44,6 +48,14 @@ private
 
   def start_furrow
     user.send(action.to_sym, seed_user)
+  end
+
+  def finish_furrow
+    if action == 'follow'
+      user.unfollow(seed_user)
+    else
+      user.follow(seed_user)
+    end
   end
 
   def cannot_overlap_furrows

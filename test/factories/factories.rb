@@ -8,6 +8,14 @@ Factory.define :follow_furrow, :parent => :furrow do |f|
   f.action 'follow'
 end
 
+Factory.define :unfollow_furrow, :parent => :furrow do |f|
+  f.action 'unfollow'
+end
+
+Factory.define :started_unfollow_furrow, :parent => :furrow do |f|
+  f.state 'started'
+end
+
 Factory.define :started_follow_furrow, :parent => :follow_furrow do |f|
   f.state 'started'
 end

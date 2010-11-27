@@ -69,4 +69,27 @@ class FurrowTest < ActiveSupport::TestCase
     assert_equal 3, Furrow.due_for_completion.count
   end
 
+  test 'finishing a follow furrow' do
+    furrow = Factory(:started_follow_furrow)
+    User.any_instance.expects(:unfollow).with(furrow.seed_user)
+    furrow.finish
+  end
+
+  test 'finishing a unfollow furrow' do
+    furrow = Factory(:started_unfollow_furrow)
+    User.any_instance.expects(:follow).with(furrow.seed_user)
+    furrow.finish
+  end
+
+  test 'starting a follow furrow' do
+    furrow = Factory(:follow_furrow)
+    User.any_instance.expects(:follow).with(furrow.seed_user)
+    furrow.start
+  end
+
+  test 'starting a unfollow furrow' do
+    furrow = Factory(:unfollow_furrow)
+    User.any_instance.expects(:unfollow).with(furrow.seed_user)
+    furrow.start
+  end
 end
