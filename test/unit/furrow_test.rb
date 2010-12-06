@@ -92,4 +92,12 @@ class FurrowTest < ActiveSupport::TestCase
     User.any_instance.expects(:unfollow).with(furrow.seed_user)
     furrow.start
   end
+
+  test 'creating a follow furrow when the current user already follows the seed user should fail' do
+
+  end
+
+  test 'creating a unfollow furrow when the current user is not already following the seed user should fail' do
+
+  end
 end
