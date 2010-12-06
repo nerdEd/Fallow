@@ -11,6 +11,10 @@ gem 'dynamic_form'
 gem 'capistrano'
 
 group :test do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
   gem 'mocha', :require => false
   gem 'factory_girl'
   gem 'turn'
