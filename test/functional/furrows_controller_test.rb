@@ -2,10 +2,12 @@ require 'test_helper'
 
 class FurrowsControllerTest < ActionController::TestCase
   test "post to create w/ user logged in and a complete furrow form" do
+    stub_new_from_nickname
     stub_logged_in
 
-    assert_difference ['Furrow.count', 'User.count'] do
-      stub_new_from_nickname
+    User.any_instance.expects(:follow)
+
+    assert_difference ['Furrow.count'], 1 do
       post :create, valid_params
     end
 
@@ -20,7 +22,6 @@ class FurrowsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to root_path
-    assert_select('#error', 'Please sign in with Twitter')
   end
 
   test "post to create w/ a user logged in and a missing seed user name" do
@@ -31,8 +32,7 @@ class FurrowsControllerTest < ActionController::TestCase
       post :create, valid_params
     end
 
-    assert_redirected_to root_path
-    assert_select('#error', "Couldn't find twitter user named bad_user")
+    assert_response 200
   end
 
   test "post to create w/o a user logged in and a incomplete furrow form" do
@@ -44,7 +44,7 @@ class FurrowsControllerTest < ActionController::TestCase
   end
 
   def stub_logged_in
-    FurrowsController.any_instance.expects(:current_user).twice.returns(Factory(:user))
+    session[:user] = Factory(:user)
   end
 
   def valid_params
