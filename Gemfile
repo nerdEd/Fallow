@@ -21,6 +21,8 @@ end
 
 group :test, :development do
   gem 'ruby-debug19'
+  gem 'ZenTest'
+  gem 'autotest-rails'
 end
 
 group :development do 
