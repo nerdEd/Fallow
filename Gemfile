@@ -6,6 +6,7 @@ gem 'twitter'
 gem 'omniauth'
 gem 'transitions', :require => ["transitions", "active_record/transitions"]
 gem 'dynamic_form'
+gem 'haml'
 
 # Deploy with Capistrano
 gem 'capistrano'

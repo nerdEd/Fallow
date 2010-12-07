@@ -83,6 +83,7 @@ GEM
     gherkin (2.2.9)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
+    haml (3.0.23)
     hashie (0.4.0)
     highline (1.6.1)
     httparty (0.6.1)
@@ -226,6 +227,7 @@ DEPENDENCIES
   dynamic_form
   factory_girl
   fakeweb
+  haml
   launchy
   mocha
   omniauth
