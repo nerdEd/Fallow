@@ -35,10 +35,6 @@ class FurrowsControllerTest < ActionController::TestCase
     assert_response 200
   end
 
-  test "post to create w/o a user logged in and a incomplete furrow form" do
-
-  end
-
   def stub_new_from_nickname 
     User.expects(:new_from_nickname).once.returns(Factory(:user))
   end
