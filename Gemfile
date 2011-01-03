@@ -32,4 +32,5 @@ end
 
 group :development do 
   gem 'rvm'
+  gem 'pickler'
 end
