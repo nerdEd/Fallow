@@ -34,6 +34,7 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    autotest-growl (0.2.9)
     autotest-rails (4.1.0)
       ZenTest
     builder (2.1.2)
@@ -222,6 +223,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest
+  autotest-growl
   autotest-rails
   capistrano
   capybara

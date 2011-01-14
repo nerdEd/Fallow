@@ -22,6 +22,9 @@ group :test do
   gem 'vcr'
   gem 'fakeweb'
   gem 'timecop'
+  gem 'ZenTest'
+  gem 'autotest-rails'
+  gem 'autotest-growl'
 end
 
 group :test, :development do
