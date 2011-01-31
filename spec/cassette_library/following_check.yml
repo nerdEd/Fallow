@@ -1,0 +1,267 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/friendships/exists.json?user_a=nerded&user_b=bryanl
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="jw8EEIzeDZgJBzfFUH5xfbKaSwcEs73ApjLGkONpQ", oauth_signature="Wr5lhUxOKg7l%2Bg7uqFUusUz5B3E%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296419450", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Sun, 30 Jan 2011 20:30:51 GMT
+      server: 
+      - hi
+      status: 
+      - 200 OK
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296419451-38492-30241
+      x-ratelimit-limit: 
+      - "150"
+      etag: 
+      - "\"b326b5062b2f0e69046810717534cb09\""
+      last-modified: 
+      - Sun, 30 Jan 2011 20:30:51 GMT
+      x-ratelimit-remaining: 
+      - "133"
+      x-runtime: 
+      - "0.02359"
+      x-transaction-mask: 
+      - 0b5b266a28469a7b52ded76c9a66f018
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "4"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296420292"
+      set-cookie: 
+      - k=69.251.253.145.1296419451199498; path=/; expires=Sun, 06-Feb-11 20:30:51 GMT; domain=.twitter.com
+      - guest_id=129641945120226717; path=/; expires=Tue, 01 Mar 2011 20:30:51 GMT
+      - _twitter_sess=BAh7CDoHaWQiJTU5NGIwMmQxZGJjNzdhZGE0ZWJkMzE0Y2NlMDU5MWMwIgpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsIRvGe2C0B--38377b3e8ecb307ead37034d6c67d2f73f81ce37; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "true"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/friendships/exists.json?user_a=nerded&user_b=dhh
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="VfXefGWzhPycbpu8ttuBhEn0qNsYlOW0tvqWSsbhh64", oauth_signature="hRqHJXAkQJf93RxCEvpPXkeKf48%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296419451", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Sun, 30 Jan 2011 20:30:52 GMT
+      server: 
+      - hi
+      status: 
+      - 200 OK
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296419452-49332-21324
+      x-ratelimit-limit: 
+      - "150"
+      etag: 
+      - "\"68934a3e9455fa72420237eb05902327\""
+      last-modified: 
+      - Sun, 30 Jan 2011 20:30:52 GMT
+      x-ratelimit-remaining: 
+      - "131"
+      x-runtime: 
+      - "0.03338"
+      x-transaction-mask: 
+      - 0b5b266a28469a7b52ded76c9a66f018
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "5"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296420292"
+      set-cookie: 
+      - k=69.251.253.145.1296419452161233; path=/; expires=Sun, 06-Feb-11 20:30:52 GMT; domain=.twitter.com
+      - guest_id=129641945221035051; path=/; expires=Tue, 01 Mar 2011 20:30:52 GMT
+      - _twitter_sess=BAh7CDoHaWQiJTRkNGVlNmMwZDFhMGJjZTEzYjdkMTA5OTBhODE1NWRmIgpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsINfWe2C0B--5253b6f1ae36de23dcaaad30a807e770f27f0aba; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "false"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/users/show.json?screen_name=nerded
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="GGgb7grIDt6Kqe4BVhFtzPcDvSzXcbkNtIlNzSKvU", oauth_signature="WJ3afIG89B2xe4HatWk%2BoErrwkk%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296419452", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Sun, 30 Jan 2011 20:30:52 GMT
+      server: 
+      - hi
+      status: 
+      - 200 OK
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296419452-81939-51368
+      x-ratelimit-limit: 
+      - "150"
+      etag: 
+      - "\"97d95a4aa6725b479c1fffac4fe6f3ad\""
+      last-modified: 
+      - Sun, 30 Jan 2011 20:30:52 GMT
+      x-ratelimit-remaining: 
+      - "130"
+      x-runtime: 
+      - "0.02138"
+      x-transaction-mask: 
+      - 0b5b266a28469a7b52ded76c9a66f018
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "1567"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296420292"
+      set-cookie: 
+      - k=69.251.253.145.1296419452620162; path=/; expires=Sun, 06-Feb-11 20:30:52 GMT; domain=.twitter.com
+      - guest_id=129641945280250042; path=/; expires=Tue, 01 Mar 2011 20:30:52 GMT
+      - _twitter_sess=BAh7CDoHaWQiJTJlM2VkMGRkODVlOWZhZTFlN2ZjNTI4NjdmOTFkZWRhIgpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsIh%252Fee2C0B--b5df2765473cc8426a99b8532e6df52685f05597; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "{\"followers_count\":214,\"url\":\"http:\\/\\/www.EdSchmalzle.com\",\"profile_link_color\":\"009999\",\"description\":\"\",\"status\":{\"in_reply_to_status_id_str\":null,\"in_reply_to_user_id\":null,\"in_reply_to_status_id\":null,\"text\":\"OH: \\\"you've had 4 loco, you're not gonna die\\\"\",\"contributors\":null,\"in_reply_to_user_id_str\":null,\"place\":null,\"retweet_count\":0,\"truncated\":false,\"id_str\":\"31167696464781312\",\"favorited\":false,\"source\":\"\\u003Ca href=\\\"http:\\/\\/twitter.com\\/\\\" rel=\\\"nofollow\\\"\\u003ETwitter for iPhone\\u003C\\/a\\u003E\",\"geo\":null,\"in_reply_to_screen_name\":null,\"retweeted\":false,\"coordinates\":null,\"id\":31167696464781312,\"created_at\":\"Sat Jan 29 01:52:12 +0000 2011\"},\"follow_request_sent\":false,\"following\":false,\"profile_sidebar_border_color\":\"eeeeee\",\"location\":\"Baltimore, MD\",\"id_str\":\"15414199\",\"contributors_enabled\":false,\"profile_image_url\":\"http:\\/\\/a2.twimg.com\\/profile_images\\/1170783253\\/ShadesHeadshot_normal.png\",\"show_all_inline_media\":true,\"geo_enabled\":false,\"profile_use_background_image\":true,\"statuses_count\":619,\"profile_background_color\":\"131516\",\"screen_name\":\"nerded\",\"listed_count\":30,\"profile_background_image_url\":\"http:\\/\\/a2.twimg.com\\/a\\/1296156503\\/images\\/themes\\/theme14\\/bg.gif\",\"notifications\":false,\"protected\":false,\"friends_count\":246,\"profile_text_color\":\"333333\",\"name\":\"Ed Schmalzle\",\"verified\":false,\"favourites_count\":3,\"profile_sidebar_fill_color\":\"efefef\",\"id\":15414199,\"is_translator\":false,\"lang\":\"en\",\"profile_background_tile\":true,\"time_zone\":\"Hawaii\",\"utc_offset\":-36000,\"created_at\":\"Sun Jul 13 12:01:50 +0000 2008\"}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/friendships/exists.json?user_a=nerded&user_b=fake_usernamexx129134
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="9LeXKcfxoNs3ucTHq8UEPXYcx9WbNxOYiOvzAJOLc", oauth_signature="%2BVZQA8sHVoxpD3%2BEZb23MVXiC%2F4%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296419452", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 403
+      message: Forbidden
+    headers: 
+      date: 
+      - Sun, 30 Jan 2011 20:30:53 GMT
+      server: 
+      - hi
+      status: 
+      - 403 Forbidden
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296419453-85250-27886
+      x-ratelimit-limit: 
+      - "150"
+      last-modified: 
+      - Sun, 30 Jan 2011 20:30:53 GMT
+      x-ratelimit-remaining: 
+      - "129"
+      x-runtime: 
+      - "0.04329"
+      x-transaction-mask: 
+      - 0b5b266a28469a7b52ded76c9a66f018
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "133"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296420292"
+      set-cookie: 
+      - k=69.251.253.145.1296419453193644; path=/; expires=Sun, 06-Feb-11 20:30:53 GMT; domain=.twitter.com
+      - guest_id=129641945389235971; path=/; expires=Tue, 01 Mar 2011 20:30:53 GMT
+      - _twitter_sess=BAh7CDoHaWQiJTNjMWZhMmZlZjJiMzNjMTMwNzVjNWMzMDE3MmZhM2E4Igpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsIyPue2C0B--10f7e92aa28a55410ba2b6207f3ff5d75f996afa; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "{\"request\":\"\\/1\\/friendships\\/exists.json?user_a=nerded&user_b=fake_usernamexx129134\",\"error\":\"Could not find both specified users.\"}"
+    http_version: "1.1"

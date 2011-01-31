@@ -62,3 +62,64 @@
       - close
     body: "{\"profile_image_url\":\"http:\\/\\/a2.twimg.com\\/profile_images\\/965494658\\/PirateFace_normal.jpg\",\"description\":\"\",\"notifications\":false,\"profile_text_color\":\"666666\",\"status\":{\"place\":null,\"geo\":null,\"in_reply_to_user_id\":667803,\"favorited\":false,\"contributors\":null,\"coordinates\":null,\"in_reply_to_screen_name\":\"lightcap\",\"in_reply_to_status_id\":null,\"id_str\":\"3613395932680192\",\"retweet_count\":null,\"source\":\"\\u003Ca href=\\\"http:\\/\\/twitter.com\\/\\\" rel=\\\"nofollow\\\"\\u003ETwitter for iPhone\\u003C\\/a\\u003E\",\"retweeted\":false,\"created_at\":\"Sun Nov 14 01:01:15 +0000 2010\",\"in_reply_to_status_id_str\":null,\"truncated\":false,\"id\":3613395932680192,\"in_reply_to_user_id_str\":\"667803\",\"text\":\"@lightcap @MikeTaus what is Oregon doing tonight?\"},\"screen_name\":\"nerded\",\"id_str\":\"15414199\",\"listed_count\":27,\"time_zone\":\"Hawaii\",\"profile_link_color\":\"2FC2EF\",\"statuses_count\":940,\"url\":\"http:\\/\\/www.EdSchmalzle.com\",\"show_all_inline_media\":true,\"friends_count\":220,\"profile_sidebar_fill_color\":\"252429\",\"followers_count\":179,\"contributors_enabled\":false,\"lang\":\"en\",\"profile_use_background_image\":true,\"created_at\":\"Sun Jul 13 12:01:50 +0000 2008\",\"location\":\"Baltimore, MD\",\"geo_enabled\":false,\"profile_sidebar_border_color\":\"181A1E\",\"protected\":false,\"profile_background_image_url\":\"http:\\/\\/s.twimg.com\\/a\\/1289518607\\/images\\/themes\\/theme9\\/bg.gif\",\"favourites_count\":4,\"name\":\"Ed Schmalzle\",\"following\":false,\"verified\":false,\"id\":15414199,\"follow_request_sent\":false,\"profile_background_tile\":false,\"utc_offset\":-36000,\"profile_background_color\":\"1A1B1F\"}"
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/users/show.json?screen_name=fake_usernamexx1231341231123
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="nmJmkjWZ7ehc04MKag0Ut6Gmuh0PjXpC8UNwtVDAec", oauth_signature="Jlo%2BI7QH45wJlvCLkgjj2nzx8sw%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296416692", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      date: 
+      - Sun, 30 Jan 2011 19:44:52 GMT
+      server: 
+      - hi
+      status: 
+      - 404 Not Found
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296416692-29971-3944
+      x-ratelimit-limit: 
+      - "150"
+      last-modified: 
+      - Sun, 30 Jan 2011 19:44:52 GMT
+      x-ratelimit-remaining: 
+      - "149"
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "96"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296420292"
+      set-cookie: 
+      - k=69.251.253.145.1296416692836815; path=/; expires=Sun, 06-Feb-11 19:44:52 GMT; domain=.twitter.com
+      - guest_id=129641669284092081; path=/; expires=Tue, 01 Mar 2011 19:44:52 GMT
+      - _twitter_sess=BAh7CDoHaWQiJTY5NGNiZjJmZjQwZjBlMzRiYmU2OWJjMjA4MGU2N2U5Igpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsIa9p02C0B--3a337dcaaaa2cafb6752a1ac04265e13078a8eca; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "{\"request\":\"\\/1\\/users\\/show.json?screen_name=fake_usernamexx1231341231123\",\"error\":\"Not found\"}"
+    http_version: "1.1"

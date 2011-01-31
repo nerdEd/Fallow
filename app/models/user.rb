@@ -18,6 +18,14 @@ class User < ActiveRecord::Base
     @client.friendship_destroy(user.twitter_id)
   end
 
+  def follows?(user)
+    @client ||= fetch_client
+    @client.friendship_exists?(nickname, user.nickname)
+  rescue Twitter::General => e
+    return false if e.message =~ /Could not find both specified users/
+    raise e
+  end
+
   def self.new_from_nickname(twitter_nickname)
     return unless twitter_nickname
 

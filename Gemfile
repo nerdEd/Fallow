@@ -8,17 +8,20 @@ gem 'transitions', :require => ["transitions", "active_record/transitions"]
 gem 'dynamic_form'
 gem 'haml'
 
-# Deploy with Capistrano
-gem 'capistrano'
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'ruby-debug19'
+  gem 'ZenTest'
+  gem 'autotest-rails'
+end
+
+group :development do 
+  gem 'rvm'
+  gem 'capistrano'
+end
 
 group :test do
-  gem 'cucumber-rails'
-  gem 'database_cleaner'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'mocha', :require => false
   gem 'factory_girl'
-  gem 'turn'
   gem 'vcr'
   gem 'fakeweb'
   gem 'timecop'
@@ -27,13 +30,3 @@ group :test do
   gem 'autotest-growl'
 end
 
-group :test, :development do
-  gem 'ruby-debug19'
-  gem 'ZenTest'
-  gem 'autotest-rails'
-end
-
-group :development do 
-  gem 'rvm'
-  gem 'pickler'
-end

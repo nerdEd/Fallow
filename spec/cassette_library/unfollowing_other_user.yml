@@ -1,0 +1,301 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/users/show.json?screen_name=npr_news
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="bPgaVsayqsZUL8xpQOZqPh7gsMgBwYWJ6HqVKPkOnOU", oauth_signature="7ZT2eRJmxoCkN%2BEDL3KFS9G1vG8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296439919", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      date: 
+      - Mon, 31 Jan 2011 02:12:02 GMT
+      server: 
+      - hi
+      status: 
+      - 404 Not Found
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296439921-50152-32608
+      x-ratelimit-limit: 
+      - "150"
+      last-modified: 
+      - Mon, 31 Jan 2011 02:12:01 GMT
+      x-ratelimit-remaining: 
+      - "135"
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "76"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296441033"
+      set-cookie: 
+      - k=69.251.253.145.1296439920947606; path=/; expires=Mon, 07-Feb-11 02:12:00 GMT; domain=.twitter.com
+      - guest_id=129643992199023712; path=/; expires=Wed, 02 Mar 2011 02:12:01 GMT
+      - _twitter_sess=BAh7CDoHaWQiJTJlM2NmNWJiOGQ5ZDdjNjQxMDU2ZTIxZjExYzkwNTI4Igpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsISU3X2S0B--85328040edbbe3c5776d8512c2b054dbf60b3ef2; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "{\"request\":\"\\/1\\/users\\/show.json?screen_name=npr_news\",\"error\":\"Not found\"}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://api.twitter.com:80/1/friendships/destroy/.json
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      content-length: 
+      - "0"
+      authorization: 
+      - OAuth oauth_body_hash="2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D", oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="BVGhUByEpkPpNrOToaDpcNo5iQ3pnelJZSacNSDZ1Gw", oauth_signature="nehYfE%2FJyEcXGfYqpy99G1RDJCA%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296439922", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      date: 
+      - Mon, 31 Jan 2011 02:12:04 GMT
+      server: 
+      - hi
+      status: 
+      - 404 Not Found
+      x-transaction: 
+      - 1296439924-43117-7809
+      last-modified: 
+      - Mon, 31 Jan 2011 02:12:04 GMT
+      content-type: 
+      - text/html; charset=utf-8
+      content-length: 
+      - "9230"
+      pragma: 
+      - no-cache
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      set-cookie: 
+      - k=69.251.253.145.1296439923467000; path=/; expires=Mon, 07-Feb-11 02:12:03 GMT; domain=.twitter.com
+      - guest_id=129643992453678691; path=/; expires=Wed, 02 Mar 2011 02:12:04 GMT
+      - _twitter_sess=BAh7CToMY3NyZl9pZCIlZDk1MDBmYWJmYWUwZTczNTEyMTQ4YTk0MDQ2OTRk%250AOWI6B2lkIiU3YTJiZjg2MWQ4MGQ4ODkzN2VjNTkyNmY0Njg4ZWQ5YyIKZmxh%250Ac2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoK%250AQHVzZWR7ADoPY3JlYXRlZF9hdGwrCD1X19ktAQ%253D%253D--5deb06c95560a38aa51140cbac72d810466e07fd; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "\n\
+      <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n\
+      <html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\n  <head>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n    <meta http-equiv=\"Content-Language\" content=\"en-us\" />\n    <meta content=\"noarchive,noindex\" name=\"robots\" />\n    <title>Twitter / ?</title>\n    <link href=\"http://s.twimg.com/images/favicon.ico\" rel=\"shortcut icon\" type=\"image/x-icon\" />\n    <style type=\"text/css\">\n      * { border: 0; padding: 0; margin: 0; }\n      body{ margin: 10px 0; background:#C0DEED url(http://s.twimg.com/images/bg-clouds.png) repeat-x; color:#333; font: 12px Lucida Grande, Arial, sans-serif; text-align:center }\n      #container { width: 755px; margin: 0 auto; padding: 0px 0; text-align: left; position: relative; }\n      #content { width: 100%; margin-top: 8px; float: left; padding-bottom: 15px; background: transparent url(http://s.twimg.com/images/arr2.gif) no-repeat scroll 21px 0px;}\n      .subpage #content .wrapper { background: #fff url(http://s.twimg.com/images/not-found.png) no-repeat 565px 16px;  -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px 0;}\n      .subpage #content h2 { margin: 5px 20px; font: bold 26px Helvetica Neue, Helvetica, Arial, sans-serif; *padding-bottom: 10px; }\n      .subpage #content p { margin: 0 20px 10px 20px; color: #666; font-size: 13px;}\n      .subpage #content ul { padding-left: 30px; }\n      .subpage #content ol, #side ol { padding-left: 30px; }\n      a{text-decoration:none;color: #2277BB;}\n      a:hover { text-decoration: underline;}\n      #content div.desc { margin: 11px 0px 10px 0px; }\n      a img{border:0;}\n      ul{list-style:square;padding-left:20px;}\n      div.error { width: 100%; text-align: right; margin: 10px 0;}\n      #navigation { background-color: #fff; position: absolute; top: 8px; right: 0; padding: 6px 6px; font-size: 13px; text-align: center; }\n      #navigation ul { margin: 0; padding: 0px; width: auto; height: 100%; _width: 60px; }\n      #navigation li { display:inline; padding: 0 5px; }\n      #navigation li:before { content: ' '; padding-right: 0; }\n      #navigation li.first:before { content: ''; padding-right: 0; }\n      #navigation, #footer { -moz-border-radius: 5px;-webkit-border-radius: 5px;}\n      fieldset input { border: 1px solid #ccc; padding: 5px; margin: 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; }\n      fieldset { width: 500px; background: #f1f1f1; margin: 15px 20px 10px 20px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 15px; border: 1px solid #fff; border-top: 1px solid #ccc;}\n      fieldset label { clear: both; display: block; padding: 0 0 10px 0; margin: 0; color: #666;}\n\n      /* Buttons\n      ----------------------------------------------- */\n      input.medium { width: 200px; vertical-align: middle;}\n      input.btn { vertical-align: middle; background: #ddd url(\"http://s.twimg.com/images/buttons/bg-btn.gif\") repeat-x 0 0; font:11px/14px \"Lucida Grande\",Sans-serif; width:auto; margin:0; overflow:visible; padding:4px 10px 5px; border-width:1px; border-style:solid; border-color:#ddd; border-bottom-color:#ccc; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; color:#333; text-shadow:1px 1px 0 #fff; }\n      input.btn::-moz-focus-inner { padding:0; border:0; }\n      input.btn:hover, .btn:focus { border-color:#999 #999 #888; background-position:0 -6px; color:#000; }\n      input.btn:active { background-image:none; text-shadow:none; outline:none; }\n\n      /* Footer\n      ----------------------------------------------- */\n      #footer { clear: left; width: 555px; text-align: left; padding: 0px 0; font-size: 11px; color: #778899;}\n      #footer ul { clear: both; display: block;}\n      #footer li { display: block; float: left; margin: 0 16px 0 0;}\n      #footer li.first:before { content: ''; padding-right: 0; }\n      #languages li { margin-bottom: 25px; font-size: 12px; width: 14%; text-align: center; }\n\n    </style>\n    <script type=\"text/javascript\">\n      function clearUserSearch() {\n        document.getElementById('user_search_q').value = '';\n      }\n    </script>\n  </head>\n  <body class='page-not-found'>\n    <div id=\"container\" class=\"subpage\">\n      <div id=\"navigation\">\n        <ul>\n          <li class=\"first\"><a href=\"http://twitter.com\">Home &#8250;</a></li>\n        </ul>\n      </div>\n      <h1 id=\"header\"><a href=\"http://twitter.com\"><img src=\"http://s.twimg.com/images/twitter_logo_header.png\" width=\"155\" height=\"36\" alt=\"Twitter.com\" /></a></h1>\n      <div id=\"content\">\n        <div class=\"desc\"></div>\n        <div class=\"wrapper\">\n          <h2>Sorry, that page doesn\xE2\x80\x99t exist!</h2>\n           <form action=\"http://twitter.com/search/users\" method=\"get\">\n              <fieldset class=\"common-form\">\n                  <label for=\"search_users_q\">Search for a username, first or last name</label>\n                  <input class=\"medium\" id=\"search_users_q\" name=\"q\" type=\"text\" />\n                  <input type=\"hidden\" name=\"category\" value=\"people\" />\n                  <input type=\"hidden\" name=\"source\" value=\"find_on_twitter\" />\n                  <input class=\"submit btn\" id=\"search_users_submit\" type=\"submit\" value=\"search\" />\n              </fieldset>\n          </form>\n        </div>\n      </div>\n      <div id=\"footer\" style=\"width:100%\">\n        <ul id=\"languages\">\n          <li class=\"first\"><a onclick=\"displayLanguage('en');return false;\" href=\"#\">English</a></li>\n          <li><a onclick=\"displayLanguage('de');return false;\" href=\"#\">Deutsch</a></li>\n          <li><a onclick=\"displayLanguage('es');return false;\" href=\"#\">Espa\xC3\xB1ol</a></li>\n          <li><a onclick=\"displayLanguage('fr');return false;\" href=\"#\">Fran\xC3\xA7ais</a></li>\n          <li><a onclick=\"displayLanguage('it');return false;\" href=\"#\">Italiano</a></li>\n          <li><a onclick=\"displayLanguage('ja');return false;\" href=\"#\">\xE6\x97\xA5\xE6\x9C\xAC\xE8\xAA\x9E</a></li>\n        </ul>\n\n        <ul>\n          <li class=\"first\">&copy; 2011 Twitter</li>\n          <li><a href=\"/about\">About Us</a></li>\n          <li><a href=\"/about/contact\">Contact</a></li>\n          <li><a href=\"http://blog.twitter.com/\">Blog</a></li>\n          <li><a href=\"http://status.twitter.com/\">Status</a></li>\n          <li><a href=\"http://dev.twitter.com/\">API</a></li>\n          <li><a href=\"/help\">Help</a></li>\n          <li><a href=\"/jobs\">Jobs</a></li>\n          <li><a href=\"/tos\">TOS</a></li>\n          <li><a href=\"/privacy\">Privacy</a></li>\n        </ul>\n      </div>\n    </div>\n    <!-- BEGIN google analytics -->\n    <script type=\"text/javascript\">\n      var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n      document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n    </script>\n    <script type=\"text/javascript\">\n      var pageTracker = _gat._getTracker(\"UA-30775-6\");\n      pageTracker._setDomainName(\"twitter.com\");\n      pageTracker._trackPageview('404 Error');\n    </script>\n    <!-- END google analytics -->\n    <script type=\"text/javascript\">\n    //<![CDATA[\n    var twttr = {};\n\n    twttr.translations = {\n      en: {\n        home: 'Home &#8250;',\n        title: 'Sorry, that page doesn\xE2\x80\x99t exist!',\n        prompt: 'Search for a username, first or last name',\n        button: 'search'\n      },\n      de: {\n        home: 'Home &#8250;',\n        title: 'Sorry, diese Seite existiert nicht!',\n        prompt: 'Suche nach einem Nutzernamen, einem Vor- oder Nachnamen.',\n        button: 'Suche'\n      },\n      es: {\n        home: 'P\xC3\xA1gina de Inicio &#8250;',\n        title: 'Lo sentimos, \xC2\xA1esa p\xC3\xA1gina no existe!',\n        prompt: 'Busca por nombre de usuario, nombre o apellido',\n        button: 'buscar'\n      },\n      fr: {\n        home: 'Accueil &#8250;',\n        title: 'D\xC3\xA9sol\xC3\xA9, cette page n\\'existe pas !',\n        prompt: 'Rechercher un pseudo, un nom, ou un pr\xC3\xA9nom',\n        button: 'rechercher'\n      },\n      it: {\n        home: 'Pagina Iniziale &#8250;',\n        title: 'Ci spiace ma questa pagina non esiste!',\n        prompt: 'Cerca un nome utente oppure nome e cognome',\n        button: 'cerca'\n      },\n      ja: {\n        home: '\xE3\x83\x9B\xE3\x83\xBC\xE3\x83\xA0 &#8250;',\n        title: '\xE7\x94\xB3\xE3\x81\x97\xE8\xA8\xB3\xE3\x81\x82\xE3\x82\x8A\xE3\x81\xBE\xE3\x81\x9B\xE3\x82\x93\xE3\x81\x8C\xE3\x80\x81\xE3\x81\x9D\xE3\x81\xAE\xE3\x83\x9A\xE3\x83\xBC\xE3\x82\xB8\xE3\x81\xAF\xE5\xAD\x98\xE5\x9C\xA8\xE3\x81\x97\xE3\x81\xBE\xE3\x81\x9B\xE3\x82\x93\xE3\x80\x82',\n        prompt: '\xE3\x83\xA6\xE3\x83\xBC\xE3\x82\xB6\xE3\x83\xBC\xE5\x90\x8D\xE3\x80\x81\xE3\x81\xBE\xE3\x81\x9F\xE3\x81\xAF\xE5\xA7\x93\xE3\x80\x81\xE5\x90\x8D\xE3\x81\xAB\xE3\x81\xA6\xE6\xA4\x9C\xE7\xB4\xA2\xE3\x81\xA7\xE3\x81\x8D\xE3\x81\xBE\xE3\x81\x99',\n        button: '\xE6\xA4\x9C\xE7\xB4\xA2\xE3\x81\x99\xE3\x82\x8B'\n      }\n    };\n\n    function displayLanguage(lang) {\n      if (lang && twttr.translations[lang]) {\n        document.getElementsByTagName('h2')[0].innerHTML = twttr.translations[lang].title;\n        document.getElementsByTagName('label')[0].innerHTML = twttr.translations[lang].prompt;\n        document.getElementById('search_users_submit').value = twttr.translations[lang].button;\n        document.getElementById('navigation').getElementsByTagName('a')[0].innerHTML = twttr.translations[lang].home;\n      }\n    }\n\n    var lang = window.navigator.language ? window.navigator.language.replace(/^(..).*$/, '$1') : undefined;\n    displayLanguage(lang);\n    //]]>\n    </script>\n  </body>\n\
+      </html>\n"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/users/show.json?screen_name=nerded
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="cNj72MEStYtkKXvWrgyNiytLAfJlsSPwh4KkLTPI", oauth_signature="iqGALyPads8r534Thmmg4j%2B8rx8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296440413", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 31 Jan 2011 02:20:15 GMT
+      server: 
+      - hi
+      status: 
+      - 200 OK
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296440415-51086-31776
+      x-ratelimit-limit: 
+      - "150"
+      etag: 
+      - "\"97d95a4aa6725b479c1fffac4fe6f3ad\""
+      last-modified: 
+      - Mon, 31 Jan 2011 02:20:15 GMT
+      x-ratelimit-remaining: 
+      - "128"
+      x-runtime: 
+      - "0.01715"
+      x-transaction-mask: 
+      - 0b5b266a28469a7b52ded76c9a66f018
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "1567"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296441033"
+      set-cookie: 
+      - k=69.251.253.145.1296440415003148; path=/; expires=Mon, 07-Feb-11 02:20:15 GMT; domain=.twitter.com
+      - guest_id=129644041586299391; path=/; expires=Wed, 02 Mar 2011 02:20:15 GMT
+      - _twitter_sess=BAh7CDoHaWQiJWQwNTQzYTIxMDVlYWY4ZTFmNTI3Mjc5ZjFmNzQ0NjI3Igpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsIedbe2S0B--7f5137ee8904d9d56b1dcc6b60f5046a544f314d; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "{\"followers_count\":214,\"url\":\"http:\\/\\/www.EdSchmalzle.com\",\"profile_link_color\":\"009999\",\"description\":\"\",\"status\":{\"in_reply_to_status_id_str\":null,\"in_reply_to_user_id\":null,\"in_reply_to_status_id\":null,\"text\":\"OH: \\\"you've had 4 loco, you're not gonna die\\\"\",\"contributors\":null,\"in_reply_to_user_id_str\":null,\"place\":null,\"retweet_count\":0,\"truncated\":false,\"id_str\":\"31167696464781312\",\"favorited\":false,\"source\":\"\\u003Ca href=\\\"http:\\/\\/twitter.com\\/\\\" rel=\\\"nofollow\\\"\\u003ETwitter for iPhone\\u003C\\/a\\u003E\",\"geo\":null,\"in_reply_to_screen_name\":null,\"retweeted\":false,\"coordinates\":null,\"id\":31167696464781312,\"created_at\":\"Sat Jan 29 01:52:12 +0000 2011\"},\"follow_request_sent\":false,\"following\":false,\"profile_sidebar_border_color\":\"eeeeee\",\"location\":\"Baltimore, MD\",\"id_str\":\"15414199\",\"contributors_enabled\":false,\"profile_image_url\":\"http:\\/\\/a2.twimg.com\\/profile_images\\/1170783253\\/ShadesHeadshot_normal.png\",\"show_all_inline_media\":true,\"geo_enabled\":false,\"profile_use_background_image\":true,\"statuses_count\":619,\"profile_background_color\":\"131516\",\"screen_name\":\"nerded\",\"listed_count\":30,\"profile_background_image_url\":\"http:\\/\\/a2.twimg.com\\/a\\/1296156503\\/images\\/themes\\/theme14\\/bg.gif\",\"notifications\":false,\"protected\":false,\"friends_count\":246,\"profile_text_color\":\"333333\",\"name\":\"Ed Schmalzle\",\"verified\":false,\"favourites_count\":3,\"profile_sidebar_fill_color\":\"efefef\",\"id\":15414199,\"is_translator\":false,\"lang\":\"en\",\"profile_background_tile\":true,\"time_zone\":\"Hawaii\",\"utc_offset\":-36000,\"created_at\":\"Sun Jul 13 12:01:50 +0000 2008\"}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.twitter.com:80/1/users/show.json?screen_name=nprnews
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="0kNQmHEvRJjzjiPyqJWs8Vnkrn4Srj0eW0gJchm7tNU", oauth_signature="ay1zgl6qYVQUlWtfuojTltG7DpA%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296440415", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 31 Jan 2011 02:20:16 GMT
+      server: 
+      - hi
+      status: 
+      - 200 OK
+      x-warning: 
+      - Invalid OAuth credentials detected
+      x-transaction: 
+      - 1296440416-51348-63270
+      x-ratelimit-limit: 
+      - "150"
+      etag: 
+      - "\"3108944bab42ef4ad2ec23c35e6f2bbc\""
+      last-modified: 
+      - Mon, 31 Jan 2011 02:20:16 GMT
+      x-ratelimit-remaining: 
+      - "127"
+      x-runtime: 
+      - "0.01941"
+      x-transaction-mask: 
+      - 0b5b266a28469a7b52ded76c9a66f018
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "1643"
+      pragma: 
+      - no-cache
+      x-ratelimit-class: 
+      - api
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1296441033"
+      set-cookie: 
+      - k=69.251.253.145.1296440416234921; path=/; expires=Mon, 07-Feb-11 02:20:16 GMT; domain=.twitter.com
+      - guest_id=129644041624562274; path=/; expires=Wed, 02 Mar 2011 02:20:16 GMT
+      - _twitter_sess=BAh7CDoHaWQiJTAwZTNiMmQ4MTNhYTQzNDdhYTkwMWYwYmU0OWE2OGNjIgpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsI%252Bdfe2S0B--5656c551c7683d19fedefb6b2bcc6d653de89181; domain=.twitter.com; path=/
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "{\"follow_request_sent\":false,\"verified\":false,\"followers_count\":402898,\"url\":\"http:\\/\\/www.npr.org\",\"profile_link_color\":\"0000ff\",\"description\":\"The top news stories from NPR.\",\"status\":{\"in_reply_to_status_id_str\":null,\"in_reply_to_user_id\":null,\"in_reply_to_status_id\":null,\"text\":\"First Listen: Bright Eyes, 'The People's Key' http:\\/\\/n.pr\\/dYHAnj via @nprmusic\",\"contributors\":null,\"in_reply_to_user_id_str\":null,\"place\":null,\"retweet_count\":10,\"truncated\":false,\"id_str\":\"31898345437925376\",\"favorited\":false,\"source\":\"\\u003Ca href=\\\"http:\\/\\/www.tweetdeck.com\\\" rel=\\\"nofollow\\\"\\u003ETweetDeck\\u003C\\/a\\u003E\",\"geo\":null,\"in_reply_to_screen_name\":null,\"retweeted\":false,\"coordinates\":null,\"id\":31898345437925376,\"created_at\":\"Mon Jan 31 02:15:32 +0000 2011\"},\"following\":false,\"profile_sidebar_border_color\":\"87bc44\",\"location\":\"Washington, DC\",\"id_str\":\"5392522\",\"profile_image_url\":\"http:\\/\\/a3.twimg.com\\/profile_images\\/977617677\\/twitter_news_normal.jpg\",\"listed_count\":20468,\"profile_use_background_image\":true,\"profile_background_color\":\"9ae4e8\",\"screen_name\":\"nprnews\",\"is_translator\":false,\"show_all_inline_media\":false,\"geo_enabled\":false,\"profile_background_image_url\":\"http:\\/\\/a3.twimg.com\\/a\\/1296081712\\/images\\/themes\\/theme1\\/bg.png\",\"friends_count\":78722,\"statuses_count\":24446,\"notifications\":false,\"protected\":false,\"profile_text_color\":\"000000\",\"name\":\"NPR News\",\"contributors_enabled\":false,\"favourites_count\":0,\"profile_sidebar_fill_color\":\"e0ff92\",\"id\":5392522,\"lang\":\"en\",\"profile_background_tile\":false,\"time_zone\":\"Eastern Time (US & Canada)\",\"utc_offset\":-18000,\"created_at\":\"Sun Apr 22 05:10:15 +0000 2007\"}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://api.twitter.com:80/1/friendships/destroy/5392522.json
+    body: 
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OAuth gem v0.4.4
+      content-length: 
+      - "0"
+      authorization: 
+      - OAuth oauth_body_hash="2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D", oauth_consumer_key="3tCxOIJDtxaNlRDiJs56Cg", oauth_nonce="LOPvuylHZe3avt30lpyaqjwQpu82d7i7gsmWuE4ps", oauth_signature="jJC9k3iP0MwiPZHsSMfwHr5Ybns%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296440415", oauth_version="1.0"
+      connection: 
+      - close
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 401
+      message: Unauthorized
+    headers: 
+      date: 
+      - Mon, 31 Jan 2011 02:20:16 GMT
+      server: 
+      - hi
+      status: 
+      - 401 Unauthorized
+      www-authenticate: 
+      - Basic realm="Twitter API"
+      x-runtime: 
+      - "0.00617"
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "98"
+      cache-control: 
+      - no-cache, max-age=300
+      set-cookie: 
+      - k=69.251.253.145.1296440416641462; path=/; expires=Mon, 07-Feb-11 02:20:16 GMT; domain=.twitter.com
+      - guest_id=129644041664515146; path=/; expires=Wed, 02 Mar 2011 02:20:16 GMT
+      - _twitter_sess=BAh7CDoHaWQiJWFiMzM1MGI1YmMxYmEyMGU0MDYzN2Y5YTlkNGE4MmM1Igpm%250AbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAG%250AOgpAdXNlZHsAOg9jcmVhdGVkX2F0bCsIitne2S0B--e8fbeeac2a65c8d2df8bc918cbaac51c25b79f91; domain=.twitter.com; path=/
+      expires: 
+      - Mon, 31 Jan 2011 02:25:16 GMT
+      vary: 
+      - Accept-Encoding
+      connection: 
+      - close
+    body: "{\"request\":\"\\/1\\/friendships\\/destroy\\/5392522.json\",\"error\":\"Could not authenticate with OAuth.\"}"
+    http_version: "1.1"
