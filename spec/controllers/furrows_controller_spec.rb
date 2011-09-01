@@ -8,46 +8,63 @@ describe FurrowsController do
       stub_logged_in(@user)
     end
 
-    context "post to :create with complete form" do
-      before do
-        stub_new_from_nickname
-        @user.stub!(:follow)
-        post :create, valid_params
-      end
+    describe 'GET to :index' do
+      subject {get :index}
 
-      it "should respond with redirect" do
-        response.should be_redirect
-      end
-
-      it "should give a success message to the user" do
-        flash[:notice].should =~ /Success/
-      end
+      #context 'with existing active furrows'
+      #context 'with no furrows'
+      #context 'with only expired furrows'
     end
 
-    context "post to :create with missing seed user name" do
-      before do
-        stub_bad_user_create('bad_user')
-        post :create, valid_params
+    describe 'POST to :create' do
+      let(:post_params) {valid_params}
+      subject {post :create, post_params}
+
+      context 'with complete form' do
+        before do
+          stub_new_from_nickname
+          @user.stub!(:follow)
+        end
+
+        it {should be_redirect}
+        it {should redirect_to(new_furrow_path)}
       end
 
-      it "should response with success" do
-        response.should be_success
+      context 'with missing seed user name' do
+        before {stub_bad_user_create('bad_user')}
+
+        it {should render_template(:new)}
       end
+
+      #context "post to :create with seed user that doesn't exist"
+      #context "post to :create with invalid duration"
+      #context "post to :create with invalid action"
     end
-
-    context "post to :create with seed user that doesn't exist"
-
-    context "post to :create with invalid duration"
-
-    context "post to :create with invalid action"
   end
 
   context "while not authenticated" do
-    context "post to :create with complete form" do
-      before {post :create, valid_params}
+    describe 'GET to :new' do
+      subject {get :new}
 
-      it "should respond with redirect" do
-        response.should be_redirect
+      it {should be_redirect}
+      it {should redirect_to(root_path)}
+    end
+
+    describe 'GET to :index' do
+      subject {get :index}
+
+      it {should be_redirect}
+      it {should redirect_to(root_path)}
+    end
+
+    describe 'POST to :create' do
+      subject {post :create, post_params}
+
+      context 'with complete params' do
+        let(:post_params) {valid_params}
+
+        it {should be_redirect}
+        it {should redirect_to(root_path)}
       end
     end
   end

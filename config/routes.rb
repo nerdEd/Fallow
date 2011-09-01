@@ -3,7 +3,7 @@ Fallow::Application.routes.draw do
   match '/auth/failure' => 'users#failed_auth'
   match '/logout' => 'users#logout', :as => 'logout'
 
-  resources :furrows, :only => [:create, :new]
+  resources :furrows, :only => [:create, :new, :index]
 
   root :to => "welcome#index"
 end
