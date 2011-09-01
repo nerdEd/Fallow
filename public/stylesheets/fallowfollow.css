@@ -1,5 +1,10 @@
 body {
-  background-image: url('/images/RedComposite.jpg');
+  background: url('/images/RedComposite.jpg');
+}
+
+html, html body {
+  min-height: 100%;
+  background: url('/images/RedComposite.jpg');
 }
 
 .rounded {
@@ -13,47 +18,23 @@ body {
   box-shadow: 5px 5px 6px #000;
 }
 
-.altContainer {
-  width: 900px;
-  min-height: 600px;
-  margin: 70px auto;
+.content {
+  margin-top: 40px;
   padding: 20px;
   background: white;				
-  font-family: 'Philosopher', arial, serif;
 }
 
-.altContainer h1, 
-.altContainer h2 {
-  color: #849913;
+p.large {
+  font-size: larger;
 }
 
-.altContainer h1 {
-  font-size: 48px;
+.inset {
+  width: 700px;
+  margin-left: 40px;
 }
 
-.altContainer p {
-  font-size: 24px;
-}
-
-.alignRight {
-  text-align: right;
-}
-
-a.alignRight {
-  display: block;
-}
-
-.alignLeft {
-  text-align: left;
-}
-
-.alignCenter {
-  text-align: center;
-}
-
-p.spaced {
-  margin-top: 70px;
-  margin-bottom: 70px;
+.inset #slideshow {
+  margin: 0 auto;
 }
 
 div.field_with_errors {

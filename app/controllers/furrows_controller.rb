@@ -1,6 +1,6 @@
 class FurrowsController < ApplicationController
 
-  before_filter :require_user, :except => [:new]
+  before_filter :require_user
 
   def new
     @current_user = current_user
@@ -8,14 +8,14 @@ class FurrowsController < ApplicationController
   end
 
   def create
-    seed_user = User.new_from_nickname(params[:user][:nickname])
+    seed_user = User.new_from_nickname(params['furrow']['user']['nickname'])
 
-    @furrow = Furrow.new(params[:furrow].merge!({:user => current_user, :seed_user => seed_user}))
+    @furrow = Furrow.new(params['furrow'].merge!({:user => current_user, :seed_user => seed_user}))
 
     if(@furrow.save)
       flash[:notice] = "Great Success! You will now #{@furrow.action} @#{@furrow.seed_user.nickname} for #{@furrow.duration} day(s)"
       @furrow.start!
-      redirect_to root_path
+      redirect_to new_furrow_path
     else
       @current_user = current_user
       render :new

@@ -2,7 +2,7 @@
   = error_messages_for @furrow, {:header_message => nil, :message => nil}
   %br/
   I want to
-  = f.select 'action', :options => ['unfollow', 'follow']
+  = f.select 'action', [['unfollow', 'unfollow'], ['follow', 'follow']]
   = f.fields_for @furrow.seed_user do |suf|
     = suf.text_field :nickname, :size => 15, :limit => 15
   for

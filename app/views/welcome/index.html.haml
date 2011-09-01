@@ -1,0 +1,18 @@
+%p.large Need a break from someone who's on a tweet rampage?
+
+.row
+  .span6.columns.offset1
+    .inset
+      #slideshow
+        = image_tag 'tweet-1.png'
+        = image_tag 'tweet-2.png'
+        = image_tag 'tweet-3.png'
+
+%p.large We got it covered, FallowFollow lets you unfollow people temporarily. Sign in with twitter to try it out.
+
+:javascript
+  $(document).ready(function(){
+    $('#slideshow').cycle({
+      fx: 'scrollRight',
+    });
+  });

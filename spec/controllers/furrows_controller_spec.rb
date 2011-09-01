@@ -69,8 +69,8 @@ def stub_logged_in(user=Factory(:user))
 end
 
 def valid_params
-  {:furrow => {:action => 'follow', 
-               :duration => 5}, 
-   :user => {:nickname => 'valid_twitter_user'}
+  {'furrow' => {'action' => 'follow', 
+               'duration' => 5, 
+               'user' => {'nickname' => 'valid_twitter_user'}}
   }
 end

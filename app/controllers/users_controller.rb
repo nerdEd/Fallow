@@ -8,7 +8,7 @@ class UsersController < ApplicationController
                            :token => auth['credentials']['token'],
                            :secret => auth['credentials']['secret'])
     session[:user] = user.id 
-    redirect_to root_path
+    redirect_to new_furrow_path
   end
 
   def failed_auth
