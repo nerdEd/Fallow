@@ -12,7 +12,7 @@ class FurrowsController < ApplicationController
 
     @furrow = Furrow.new(params['furrow'].merge!({:user => current_user, :seed_user => seed_user}))
 
-    if(@furrow.save)
+    if @furrow.save
       flash[:notice] = "Great Success! You will now #{@furrow.action} @#{@furrow.seed_user.nickname} for #{@furrow.duration} day(s)"
       @furrow.start!
       redirect_to new_furrow_path
