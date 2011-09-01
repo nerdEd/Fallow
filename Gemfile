@@ -29,5 +29,6 @@ group :test do
   gem 'ZenTest'
   gem 'autotest-rails'
   gem 'autotest-growl'
+  gem 'fuubar'
 end
 

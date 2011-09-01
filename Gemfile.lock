@@ -55,6 +55,10 @@ GEM
       addressable (~> 2.2.2)
       multipart-post (~> 1.0.1)
       rack (>= 1.1.0, < 2)
+    fuubar (0.0.6)
+      rspec (~> 2.0)
+      rspec-instafail (~> 0.1.8)
+      ruby-progressbar (~> 0.0.10)
     haml (3.0.23)
     hashie (0.4.0)
     highline (1.6.1)
@@ -150,6 +154,7 @@ GEM
     rspec-core (2.4.0)
     rspec-expectations (2.4.0)
       diff-lcs (~> 1.1.2)
+    rspec-instafail (0.1.8)
     rspec-mocks (2.4.0)
     rspec-rails (2.4.1)
       actionpack (~> 3.0)
@@ -167,6 +172,7 @@ GEM
     ruby-openid (2.1.8)
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
+    ruby-progressbar (0.0.10)
     ruby_core_source (0.1.4)
       archive-tar-minitar (>= 0.5.2)
     rubyntlm (0.1.1)
@@ -195,6 +201,7 @@ DEPENDENCIES
   dynamic_form
   factory_girl
   fakeweb
+  fuubar
   haml
   jquery-rails
   omniauth
