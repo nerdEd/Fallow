@@ -27,13 +27,13 @@ describe FurrowsController do
         end
 
         it {should be_redirect}
-        it {should redirect_to(new_furrow_path)}
+        it {should redirect_to(furrows_path)}
       end
 
       context 'with missing seed user name' do
         before {stub_bad_user_create('bad_user')}
 
-        it {should render_template(:new)}
+        it {should render_template(:index)}
       end
 
       #context "post to :create with seed user that doesn't exist"
@@ -43,13 +43,6 @@ describe FurrowsController do
   end
 
   context "while not authenticated" do
-    describe 'GET to :new' do
-      subject {get :new}
-
-      it {should be_redirect}
-      it {should redirect_to(root_path)}
-    end
-
     describe 'GET to :index' do
       subject {get :index}
 

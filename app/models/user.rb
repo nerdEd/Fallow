@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   has_many :furrows
-  has_many :furrows, :foreign_key => 'seed_user_id'
 
   validates_presence_of :twitter_id
   validates_presence_of :nickname

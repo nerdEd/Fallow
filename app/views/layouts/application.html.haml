@@ -25,8 +25,7 @@
             %h3= link_to 'FallowFollow', '#'
             - if @current_user
               %ul
-                %li= link_to 'Active Furrows'
-                %li= link_to 'Expired Furrows'
+                %li{:class => ('active' if @furrows)}= link_to 'Active Furrows'
             %ul.nav.secondary-nav
               - if @current_user
                 %li= link_to 'Sign Out', logout_path
