@@ -2,6 +2,10 @@ class FurrowsController < ApplicationController
 
   before_filter :require_user
 
+  def index
+    @furrows = @current_user.furrows.active
+  end
+
   def new
     @current_user = current_user
     @furrow = Furrow.new(:user => @current_user, :seed_user => User.new)
