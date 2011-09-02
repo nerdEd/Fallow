@@ -20,6 +20,10 @@ Factory.define :started_follow_furrow, :parent => :follow_furrow do |f|
   f.state 'started'
 end
 
+Factory.define :finished_follow_furrow, :parent => :follow_furrow do |f|
+  f.state 'finished'
+end
+
 Factory.define :user do |f|
   f.sequence(:twitter_id) {|n| "fakeid#{n}"}
   f.sequence(:nickname) {|n| "frankie0#{n}"}
