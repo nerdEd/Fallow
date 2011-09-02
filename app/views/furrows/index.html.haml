@@ -12,7 +12,7 @@
       %th 
   - @furrows.each do |furrow|
     %tr
-      %td= furrow.seed_user.name
+      %td== #{furrow.seed_user.name} (#{link_to '@' + furrow.seed_user.nickname, 'http://www.twitter.com/' + furrow.seed_user.nickname})
       %td= furrow.action
       %td= Date.today + furrow.duration.days
       %td= link_to 'Cancel', cancel_furrow_path(furrow), :method => :put
