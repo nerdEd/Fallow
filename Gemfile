@@ -19,6 +19,7 @@ end
 group :development do 
   gem 'rvm'
   gem 'capistrano'
+  gem 'heroku'
 end
 
 group :test do
