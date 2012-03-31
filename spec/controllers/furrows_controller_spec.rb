@@ -4,7 +4,7 @@ describe FurrowsController do
 
   context "as an authenticated user" do
     before do
-      @user = Factory(:user)
+      @user = FactoryGirl.create(:user)
       stub_logged_in(@user)
     end
 
@@ -64,7 +64,7 @@ describe FurrowsController do
 end
 
 def stub_new_from_nickname 
-  User.stub!(:new_from_nickname).and_return(Factory(:user))
+  User.stub!(:new_from_nickname).and_return(FactoryGirl.create(:user))
 end
 
 def stub_bad_user_create(twitter_nickname)
