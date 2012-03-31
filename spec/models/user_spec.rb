@@ -91,11 +91,6 @@ describe User, "with an authenticated twitter client" do
     @seed_user = FactoryGirl.create(:user) 
 
     @twitter_client = mock('client')
-    credentials = mock('credentials')
-    Twitter::OAuth.stub!(:new).and_return(credentials)
-
-    credentials.stub!(:authorize_from_access).and_return(@user.token, @user.secret)
-
     Twitter::Base.stub!(:new).and_return(@twitter_client)
   end
 
