@@ -8,12 +8,5 @@ def stub_user_search(username)
 end
 
 def stub_client_creation(twitter_client, access_token=nil, access_secret=nil)
-  credentials = mock('credentials')
-  Twitter::OAuth.expects(:new).once.returns(credentials)
-
-  if(access_token && access_secret)
-    credentials.expects(:authorize_from_access).once.with(access_token, access_secret)
-  end
-
   Twitter::Base.expects(:new).once.returns(twitter_client)
 end
