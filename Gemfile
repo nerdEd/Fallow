@@ -1,9 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.2.0'
 gem 'pg'
-gem 'twitter'
-gem 'omniauth'
+gem 'twitter', '2.0.0'
+gem 'omniauth', '1.0.0'
+gem 'omniauth-twitter'
 gem 'transitions', :require => ["transitions", "active_record/transitions"]
 gem 'dynamic_form'
 gem 'haml'
@@ -23,7 +24,7 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'vcr'
   gem 'fakeweb'
   gem 'timecop'
