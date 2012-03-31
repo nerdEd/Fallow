@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User, "being created without twitter" do
-  subject {Factory.build(:user)}
+  subject {FactoryGirl.build(:user)}
 
   context "without a twitter id" do
     before {subject.twitter_id = nil}
@@ -16,13 +16,13 @@ describe User, "being created without twitter" do
   end
 
   context "with a duplicate twitter id" do
-    before {Factory(:user, :twitter_id => subject.twitter_id)}
+    before {FactoryGirl.create(:user, :twitter_id => subject.twitter_id)}
 
     it {should_not be_valid}
   end
 
   context "with a duplicate nickname" do
-    before {Factory(:user, :nickname => subject.nickname)}
+    before {FactoryGirl.create(:user, :nickname => subject.nickname)}
 
     it {should_not be_valid}
   end
@@ -45,7 +45,7 @@ describe User, "being initialized from nickname" do
 
   context "when the nickname is valid, but the user already exists" do
     before do
-      @user = Factory(:user)
+      @user = FactoryGirl.create(:user)
     end
 
     subject {User.new_from_nickname(@user.nickname)}
@@ -67,19 +67,19 @@ describe User, "checking whether it follows another user" do
   subject {@user.follows?(@other_user)}
 
   context "when the user is following the other user" do
-    before {@other_user = Factory(:user, :nickname => 'bryanl')}
+    before {@other_user = FactoryGirl.create(:user, :nickname => 'bryanl')}
 
     it {should be_true}
   end
 
   context "when the user isn't following the other user" do
-    before {@other_user = Factory(:user, :nickname => 'dhh')}
+    before {@other_user = FactoryGirl.create(:user, :nickname => 'dhh')}
 
     it {should be_false}
   end
   
   context "when the user that is being checked on doesn't exist" do
-    before {@other_user = Factory(:user, :nickname => 'fake_usernamexx129134')}
+    before {@other_user = FactoryGirl.create(:user, :nickname => 'fake_usernamexx129134')}
 
     it {should be_false}
   end
@@ -87,8 +87,8 @@ end
 
 describe User, "with an authenticated twitter client" do
   before do
-    @user = Factory(:user)
-    @seed_user = Factory(:user) 
+    @user = FactoryGirl.create(:user)
+    @seed_user = FactoryGirl.create(:user) 
 
     @twitter_client = mock('client')
     credentials = mock('credentials')
