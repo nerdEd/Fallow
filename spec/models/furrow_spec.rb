@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Furrow, "being created" do
-  subject {Factory.build(:furrow)}
+  subject {FactoryGirl.build(:furrow)}
 
   it {should be_valid}
   
@@ -33,7 +33,7 @@ describe Furrow, "being created" do
 
   context "when an identical furrow already exists, unstarted" do
     before do
-      Factory(:furrow, :user => subject.user, :seed_user => subject.seed_user)
+      FactoryGirl.create(:furrow, :user => subject.user, :seed_user => subject.seed_user)
     end
 
     it {should_not be_valid}
@@ -41,7 +41,7 @@ describe Furrow, "being created" do
 
   context "when an identical furrow already exists, started" do
     before do
-      Factory(:furrow, :user => subject.user, :seed_user => subject.seed_user, :state => 'started')
+      FactoryGirl.create(:furrow, :user => subject.user, :seed_user => subject.seed_user, :state => 'started')
     end
 
     it {should_not be_valid}
@@ -49,7 +49,7 @@ describe Furrow, "being created" do
 
   context "when an identical furrow already exists, finished" do
     before do
-      Factory(:furrow, :user => subject.user, :seed_user => subject.seed_user, :state => 'finished')
+      FactoryGirl.create(:furrow, :user => subject.user, :seed_user => subject.seed_user, :state => 'finished')
     end
 
     it {should be_valid}
@@ -119,7 +119,7 @@ describe Furrow, "finding complete furrows" do
 
   context "when none are ready for completion" do
     before do
-      3.times {Factory(:started_follow_furrow)}
+      3.times {FactoryGirl.create(:started_follow_furrow)}
     end
 
     it {should == 0}
@@ -128,8 +128,8 @@ describe Furrow, "finding complete furrows" do
   context "when some are ready for completion" do
     before do
       Timecop.freeze(Date.today - 5) do
-        3.times {Factory(:started_follow_furrow, :duration => 3, :created_at => Date.today)}
-        Factory(:started_follow_furrow, :duration => 6, :created_at => Date.today)
+        3.times {FactoryGirl.create(:started_follow_furrow, :duration => 3, :created_at => Date.today)}
+        FactoryGirl.create(:started_follow_furrow, :duration => 6, :created_at => Date.today)
       end
     end
 
