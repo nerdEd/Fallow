@@ -91,13 +91,13 @@ describe User, "with an authenticated twitter client" do
     @seed_user = FactoryGirl.create(:user) 
 
     @twitter_client = mock('client')
-    Twitter::Base.stub!(:new).and_return(@twitter_client)
+    Twitter::Client.stub!(:new).and_return(@twitter_client)
   end
 
   context "following another user" do
     context "when the user to be followed isn't already being followed" do
       before do
-        @twitter_client.stub!(:friendship_create).and_return(@seed_user.twitter_id)
+        @twitter_client.stub!(:follow).and_return(@seed_user.twitter_id)
       end
 
       it "should follow the user" do
@@ -113,7 +113,7 @@ describe User, "with an authenticated twitter client" do
   context "unfollowing another user" do
     context "when the user to be unfollowed is already being followed" do
       before do
-        @twitter_client.stub!(:friendship_destroy).and_return(@seed_user.twitter_id)
+        @twitter_client.stub!(:unfollow).and_return(@seed_user.twitter_id)
       end
       
       it "should unfollow the seed user" do

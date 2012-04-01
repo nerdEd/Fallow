@@ -9,17 +9,19 @@ class User < ActiveRecord::Base
 
   def follow(user)
     @client ||= fetch_client
-    @client.friendship_create(user.twitter_id, true)
+    @client.follow(user.twitter_id)
   end
 
   def unfollow(user)
     @client ||= fetch_client
-    @client.friendship_destroy(user.twitter_id)
+    @client.unfollow(user.twitter_id)
   end
 
   def follows?(user)
     @client ||= fetch_client
     @client.friendship?(nickname, user.nickname)
+  rescue Twitter::Error::Forbidden
+    false
   end
 
   def self.new_from_nickname(twitter_nickname)
