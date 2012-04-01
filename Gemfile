@@ -21,6 +21,7 @@ group :development do
   gem 'rvm'
   gem 'capistrano'
   gem 'heroku'
+  gem 'puma'
 end
 
 group :test do
