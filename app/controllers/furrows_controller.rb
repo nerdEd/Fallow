@@ -30,7 +30,8 @@ class FurrowsController < ApplicationController
       flash[:notice] = "Great Success! You will now #{@furrow.action} @#{@furrow.seed_user.nickname} for #{@furrow.duration} day(s)"
       @furrow.start!
       job = @furrow.delay(:run_at => (Date.today + @furrow.duration.days)).finish!
-      @furrow.update_attribute(:delayed_job_id, job.id)
+      @furrow.delayed_job_id = job.id
+      @furrow.save
       redirect_to furrows_path
     else
       @current_user = current_user
