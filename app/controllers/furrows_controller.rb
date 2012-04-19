@@ -1,5 +1,4 @@
 class FurrowsController < ApplicationController
-
   before_filter :require_user
 
   def index
@@ -14,10 +13,11 @@ class FurrowsController < ApplicationController
   end
 
   def cancel
-    @furrow = @current_user.furrows.active.find(params[:id])
-    @furrow.finish! if @furrow
-    pending_job = Delayed::Job.find(@furrow.delayed_job_id)
-    pending_job.destroy if pending_job
+    if @furrow = @current_user.furrows.active.find(params[:id])
+      @furrow.cancel!
+    else
+      flash[:error] = 'Invalid furrow'
+    end
     redirect_to furrows_path
   end
 
@@ -29,9 +29,6 @@ class FurrowsController < ApplicationController
     if @furrow.save
       flash[:notice] = "Great Success! You will now #{@furrow.action} @#{@furrow.seed_user.nickname} for #{@furrow.duration} day(s)"
       @furrow.start!
-      job = @furrow.delay(:run_at => (Date.today + @furrow.duration.days)).finish!
-      @furrow.delayed_job_id = job.id
-      @furrow.save
       redirect_to furrows_path
     else
       @current_user = current_user

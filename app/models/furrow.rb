@@ -30,6 +30,10 @@ class Furrow < ActiveRecord::Base
     event :finish do
       transitions :to => :finished, :from => [:started], :on_transition => :finish_furrow
     end
+    
+    event :cancel do
+      transitions :to => :finished, :from => [:started], :on_transition => :cancel_furrow
+    end
   end  
 
   def self.active
@@ -48,6 +52,9 @@ private
 
   def start_furrow
     user.send(action.to_sym, seed_user)
+    job = self.delay(:run_at => (Date.today + self.duration.days)).finish!
+    self.delayed_job_id = job.id
+    save
   end
 
   def finish_furrow
@@ -56,6 +63,12 @@ private
     else
       user.follow(seed_user)
     end
+  end
+
+  def cancel_furrow
+    finish_furrow
+    pending_job = Delayed::Job.find(self.delayed_job_id)
+    pending_job.destroy if pending_job
   end
 
   def cannot_overlap_furrows
