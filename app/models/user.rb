@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   def follow(user)
     @client ||= fetch_client
-    @client.follow(user.twitter_id)
+    @client.follow(user.nickname)
   end
 
   def unfollow(user)
@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
     twitter_nickname = twitter_nickname.delete '@'
     
     existing_user = User.find_by_nickname(twitter_nickname)
+    existing_user = User.where(['lower(nickname) = ?', twitter_nickname.downcase]).first
     return existing_user if existing_user
 
     user_details = Twitter.user(twitter_nickname)

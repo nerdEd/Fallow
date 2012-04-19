@@ -9,6 +9,7 @@ gem 'transitions', :require => ["transitions", "active_record/transitions"]
 gem 'dynamic_form'
 gem 'haml'
 gem 'jquery-rails'
+gem 'delayed_job_active_record'
 
 group :test, :development do
   gem 'rspec-rails'
