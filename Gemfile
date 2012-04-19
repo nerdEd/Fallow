@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.0'
 gem 'pg'
 gem 'twitter', '2.0.0'
-gem 'omniauth', '1.0.0'
+gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 gem 'omniauth-twitter'
 gem 'transitions', :require => ["transitions", "active_record/transitions"]
 gem 'dynamic_form'

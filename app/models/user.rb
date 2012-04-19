@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
   def unfollow(user)
     @client ||= fetch_client
-    @client.unfollow(user.twitter_id)
+    @client.unfollow(user.nickname)
   end
 
   def follows?(user)
