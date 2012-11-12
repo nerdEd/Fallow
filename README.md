@@ -15,7 +15,3 @@ To make FallowFollow work with Twitter you'll need to register the application
 with twitter and add the consumer key and secret to the heroku environment 
 variables. The keys should be `twitter_consumer_key` and 
 `twitter_consumer_secret`. 
-
-# Development
-
-
