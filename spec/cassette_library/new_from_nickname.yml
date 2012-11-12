@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1/users/show.json?screen_name=nerded
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.0.0
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 30 Mar 2012 18:21:50 GMT
+      status:
+      - 200 OK
+      etag:
+      - ! '"43e5205c604e9cf5a8bc2e8520799ee2"'
+      x-ratelimit-reset:
+      - '1333135004'
+      x-ratelimit-class:
+      - api
+      x-transaction-mask:
+      - a6183ffa5f8ca943ff1b53b5644ef114ca49924f
+      x-ratelimit-limit:
+      - '150'
+      x-transaction:
+      - 7307d96c178fa71e
+      x-runtime:
+      - '0.01425'
+      x-mid:
+      - d5953cacbef7fca311223a39de9d8cb49b8e037c
+      pragma:
+      - no-cache
+      expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      content-type:
+      - application/json; charset=utf-8
+      x-ratelimit-remaining:
+      - '144'
+      x-frame-options:
+      - SAMEORIGIN
+      last-modified:
+      - Fri, 30 Mar 2012 18:21:50 GMT
+      set-cookie:
+      - k=10.34.126.124.1333131710488703; path=/; expires=Fri, 06-Apr-12 18:21:50
+        GMT; domain=.twitter.com
+      - guest_id=v1%3A13331317104936846; domain=.twitter.com; path=/; expires=Mon,
+        31-Mar-2014 06:21:50 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCB%252BQ12Q2ASIKZmxhc2hJQzonQWN0aW9uQ29u%250AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoHaWQiJTIw%250ANjc2Y2VkMzdmOWU1ZDY0MTAyZTM0ZDFlYmYyODkw--cc9f2fdfa9678745de4888324c3aab0331e63be3;
+        domain=.twitter.com; path=/; HttpOnly
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '818'
+      server:
+      - tfe
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA61VXY+bOBT9K8ivzSYGkiFBqlbqx6qq1KfpI5LlwCWxamzW
+        vgzbVv3vvR4PgUymqiotPCDb9+uce3z5zlQjPDpWsnS3Tbfp4cBWzJ/tKKTW
+        QhmtDIgOGiVZiW6AFTmwcrJdsd7ZVmkQCP+hqK22IVT++LD5VHXyBGJwmg7P
+        iH1ZbaqN5GscVXda17arNlemvtqkacGLfZ7t8mpzf5YN+A8gG6oMhbGuk3rd
+        mxOlaK3WdgTnKftgkJXZYbtiDbRy0CiuorKyldoTBI8SBw8Xl5QXBe3WDsAI
+        IzuyZAZcA01IIB/s4BTO5tkMzKsGjtKJoyVrdyEAHh9yfgCnWkVxptQ3jIjA
+        h3/ixT8S49X/wsyAtbBt64FK/iu/45yv2BO4901yX5/J9JsOVRqLVGUtUVlD
+        pZhBa3K/7tY4juvICX1w0dujrL+cHDHTCKT1JBMiUyI0QlJ2dj+Y5OOgkzRP
+        0qzkabnjySsqiCcZ53t2yyct9MxmG95ohVDjgk4tCSpZmIsShIN/B/AoPIRe
+        RSzP5HDTjQWGKWmap7v0jgVfEobqAze0TRvaRqZo9UZqVJ11sEo+vXuZkz9o
+        9NRgPEN3+abbanM8rU+q/U38X1+t38fVyodePel7SwKvrUGnjgNaullg5FG/
+        IGIaDl8uhHF+ODxOj9gHFRoT2T+BvQlBtIH4Zk1Q4wc5SqWCp1NgmvmeFdl0
+        V1n5nfXWe3XUX0NnvUL1MPdxHmL7XbHlRZbdFdS/O34oKKwyJIqeHNGKGE5M
+        DrFABzgC4JSX7kmvZQ3PjhfVLyPSIHEiDMVofKX7f5xKPkmX5DxJtyT6ki7A
+        pPs0Yy8GWhZGzF3iLhoy7V0BW06vF44n3NNhGGthqs2gPI25AJpVA+f5W5mc
+        HbSvq1lVCgcDfi37XkNU1kBqoiVJalSI4Mim2RLpe1LC/u8OX6dZxRIHmsIY
+        G4VRxfjvP0eXpLWOOKpjUgoXT9nTj+amn4EJGrbKEMsXImjkmFouwYT/EUF5
+        OzhHcyCJ8MvkggUJQLVx+88f269Fzn5QOi/QSeO1xKDnZ1Kn5tzcujjqfvwE
+        AhuA10QHAAA=
+    http_version: '1.1'
+  recorded_at: Fri, 30 Mar 2012 18:21:56 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1/users/show.json?screen_name=fake_usernamexx1231341231123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.0.0
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      connection:
+      - close
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      date:
+      - Fri, 30 Mar 2012 18:21:51 GMT
+      status:
+      - 404 Not Found
+      x-ratelimit-limit:
+      - '150'
+      x-ratelimit-remaining:
+      - '143'
+      content-type:
+      - application/json; charset=utf-8
+      pragma:
+      - no-cache
+      expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      x-ratelimit-reset:
+      - '1333135004'
+      x-mid:
+      - b08b4bf76988af99a9c7df7620a80a97c0d3544a
+      x-ratelimit-class:
+      - api
+      x-frame-options:
+      - SAMEORIGIN
+      last-modified:
+      - Fri, 30 Mar 2012 18:21:51 GMT
+      cache-control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-transaction:
+      - 9ff0bf07f64c516a
+      set-cookie:
+      - k=10.35.35.113.1333131711340137; path=/; expires=Fri, 06-Apr-12 18:21:51 GMT;
+        domain=.twitter.com
+      - guest_id=v1%3A133313171134539042; domain=.twitter.com; path=/; expires=Mon,
+        31-Mar-2014 06:21:51 GMT
+      - _twitter_sess=BAh7CCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCHKT12Q2AToHaWQiJWIz%250ANjRlYmZiMDFmYTk1MmVlZTJhMjdmMTczMjdlMTNj--27866156bda2640a211eaa6fe6c737af2a754e63;
+        domain=.twitter.com; path=/; HttpOnly
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '106'
+      server:
+      - tfe
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA6tWSi0qyi9SslLyyy9RSMsvzUtR0lEqSi0sTS0uAYrG6BvG
+        6JcWpxYVx+gXZ+SX62UV5+fZFycXpabmxecl5qbapiVmp8aDVIB4FRWGRsaG
+        xiYgEoiVagEStKsNYAAAAA==
+    http_version: '1.1'
+  recorded_at: Fri, 30 Mar 2012 18:21:57 GMT
+recorded_with: VCR 2.0.0

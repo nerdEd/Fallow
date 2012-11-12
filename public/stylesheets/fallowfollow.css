@@ -1,0 +1,46 @@
+body {
+  background: url('/images/RedComposite.jpg');
+}
+
+html, html body {
+  min-height: 100%;
+  background: url('/images/RedComposite.jpg');
+}
+
+.rounded {
+  border-radius: 10px;
+  -moz-border-radius: 15px;
+}
+
+.shadowed {
+  -moz-box-shadow: 5px 5px 6px #000;
+  -webkit-box-shadow: 5px 5px 6px #000;
+  box-shadow: 5px 5px 6px #000;
+}
+
+.content {
+  margin-top: 40px;
+  padding: 20px;
+  background: white;				
+}
+
+p.large {
+  font-size: larger;
+}
+
+.inset {
+  width: 700px;
+  margin-left: 40px;
+}
+
+.inset #slideshow {
+  margin: 0 auto;
+}
+
+div.field_with_errors {
+  display: inline-block;
+}
+
+.errorExplanation ul {
+  list-style: none;
+}

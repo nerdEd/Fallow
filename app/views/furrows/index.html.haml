@@ -1,0 +1,53 @@
+%h2 Active Unfollows/Follows
+
+%br
+= link_to 'New Unfollow/Follow', '#', :class => 'new_link'
+
+%table.zebra-striped
+  %thead
+    %tr
+      %th Twitter User
+      %th Action
+      %th Expiration Date
+      %th 
+  - @furrows.each do |furrow|
+    %tr
+      %td== #{furrow.seed_user.name} (#{link_to '@' + furrow.seed_user.nickname, 'http://www.twitter.com/' + furrow.seed_user.nickname})
+      %td= furrow.action
+      %td= Date.today + furrow.duration.days
+      %td= link_to 'Cancel', cancel_furrow_path(furrow), :method => :put
+
+.modal{:style => 'display: none;'}
+  .modal-header
+    %h3 New Unfollow/Follow
+    = link_to 'x', '#', :class => 'close'
+  .modal-body
+    = render :partial => 'furrows/form'
+  .modal-footer
+    = link_to 'OK', '#', :class => 'btn primary'
+    = link_to 'Cancel', '#', :class => 'btn secondary'
+
+:javascript
+  $(document).ready(function() {
+    var showModalOnLoad = '#{@invalid_furrow}';
+    if(showModalOnLoad === 'yes') {
+      $('.modal').show();
+    }
+
+    $('a.new_link').bind('click', function(){
+      $('.modal').show();
+      return false;
+    });
+
+    $('a.secondary, a.close').bind('click', function(){
+      $('form input').val('');
+      $('#errorExplanation').remove();
+      $('.modal').hide();
+      return false;
+    });
+
+    $('a.primary').bind('click', function(){
+      $("form input[type='submit']").click();
+      return false;
+    });
+  });

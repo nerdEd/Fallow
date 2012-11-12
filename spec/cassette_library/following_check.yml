@@ -1,0 +1,320 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1/users/show.json?screen_name=nerded
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.0.0
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 30 Mar 2012 18:21:52 GMT
+      status:
+      - 200 OK
+      x-transaction:
+      - b314b4c48696d18a
+      x-mid:
+      - 64adf87a6d3520ad2f931fd9b855bf5c500268b3
+      pragma:
+      - no-cache
+      expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      x-ratelimit-reset:
+      - '1333135004'
+      last-modified:
+      - Fri, 30 Mar 2012 18:21:52 GMT
+      x-transaction-mask:
+      - a6183ffa5f8ca943ff1b53b5644ef114ca49924f
+      x-ratelimit-limit:
+      - '150'
+      content-type:
+      - application/json; charset=utf-8
+      x-ratelimit-class:
+      - api
+      x-ratelimit-remaining:
+      - '142'
+      cache-control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-runtime:
+      - '0.01461'
+      x-frame-options:
+      - SAMEORIGIN
+      etag:
+      - ! '"43e5205c604e9cf5a8bc2e8520799ee2"'
+      set-cookie:
+      - k=10.35.35.113.1333131712137221; path=/; expires=Fri, 06-Apr-12 18:21:52 GMT;
+        domain=.twitter.com
+      - guest_id=v1%3A133313171214175596; domain=.twitter.com; path=/; expires=Mon,
+        31-Mar-2014 06:21:52 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCI%252BW12Q2ASIKZmxhc2hJQzonQWN0aW9uQ29u%250AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoHaWQiJTk2%250AODdmMGQyOTU4ZDBmZjVhZmI4ZDk4NTZhMWE2ZjRi--f5bef7b69ecff413796f1c29900677c1573a7ee9;
+        domain=.twitter.com; path=/; HttpOnly
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '818'
+      server:
+      - tfe
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA61VXY+bOBT9K8ivzSYGkiFBqlbqx6qq1KfpI5LlwCWxamzW
+        vgzbVv3vvR4PgUymqiotPCDb9+uce3z5zlQjPDpWsnS3Tbfp4cBWzJ/tKKTW
+        QhmtDIgOGiVZiW6AFTmwcrJdsd7ZVmkQCP+hqK22IVT++LD5VHXyBGJwmg7P
+        iH1ZbaqN5GscVXda17arNlemvtqkacGLfZ7t8mpzf5YN+A8gG6oMhbGuk3rd
+        mxOlaK3WdgTnKftgkJXZYbtiDbRy0CiuorKyldoTBI8SBw8Xl5QXBe3WDsAI
+        IzuyZAZcA01IIB/s4BTO5tkMzKsGjtKJoyVrdyEAHh9yfgCnWkVxptQ3jIjA
+        h3/ixT8S49X/wsyAtbBt64FK/iu/45yv2BO4901yX5/J9JsOVRqLVGUtUVlD
+        pZhBa3K/7tY4juvICX1w0dujrL+cHDHTCKT1JBMiUyI0QlJ2dj+Y5OOgkzRP
+        0qzkabnjySsqiCcZ53t2yyct9MxmG95ohVDjgk4tCSpZmIsShIN/B/AoPIRe
+        RSzP5HDTjQWGKWmap7v0jgVfEobqAze0TRvaRqZo9UZqVJ11sEo+vXuZkz9o
+        9NRgPEN3+abbanM8rU+q/U38X1+t38fVyodePel7SwKvrUGnjgNaullg5FG/
+        IGIaDl8uhHF+ODxOj9gHFRoT2T+BvQlBtIH4Zk1Q4wc5SqWCp1NgmvmeFdl0
+        V1n5nfXWe3XUX0NnvUL1MPdxHmL7XbHlRZbdFdS/O34oKKwyJIqeHNGKGE5M
+        DrFABzgC4JSX7kmvZQ3PjhfVLyPSIHEiDMVofKX7f5xKPkmX5DxJtyT6ki7A
+        pPs0Yy8GWhZGzF3iLhoy7V0BW06vF44n3NNhGGthqs2gPI25AJpVA+f5W5mc
+        HbSvq1lVCgcDfi37XkNU1kBqoiVJalSI4Mim2RLpe1LC/u8OX6dZxRIHmsIY
+        G4VRxfjvP0eXpLWOOKpjUgoXT9nTj+amn4EJGrbKEMsXImjkmFouwYT/EUF5
+        OzhHcyCJ8MvkggUJQLVx+88f269Fzn5QOi/QSeO1xKDnZ1Kn5tzcujjqfvwE
+        AhuA10QHAAA=
+    http_version: '1.1'
+  recorded_at: Fri, 30 Mar 2012 18:21:58 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1/friendships/exists.json?user_a=nerded&user_b=bryanl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.0.0
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 30 Mar 2012 18:25:37 GMT
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-ratelimit-class:
+      - api
+      x-runtime:
+      - '0.02277'
+      x-transaction:
+      - 49a57a15818fd1af
+      pragma:
+      - no-cache
+      expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      x-mid:
+      - 644cd77b283e19022f021d35cab363aecab8b841
+      cache-control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-transaction-mask:
+      - a6183ffa5f8ca943ff1b53b5644ef114ca49924f
+      x-ratelimit-remaining:
+      - '137'
+      etag:
+      - ! '"b326b5062b2f0e69046810717534cb09"'
+      content-type:
+      - application/json; charset=utf-8
+      x-ratelimit-limit:
+      - '150'
+      x-ratelimit-reset:
+      - '1333135004'
+      last-modified:
+      - Fri, 30 Mar 2012 18:25:37 GMT
+      set-cookie:
+      - k=10.35.29.137.1333131937291569; path=/; expires=Fri, 06-Apr-12 18:25:37 GMT;
+        domain=.twitter.com
+      - guest_id=v1%3A133313193729587605; domain=.twitter.com; path=/; expires=Mon,
+        31-Mar-2014 06:25:37 GMT
+      - _twitter_sess=BAh7CCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCBEG22Q2AToHaWQiJWZk%250AOTBiOWExZjYwODBmYzA2OGQyZDM4YmExZjdiYWRh--0cdaa98d627409cc134cfd6fe67e03b4a873dfe1;
+        domain=.twitter.com; path=/; HttpOnly
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '24'
+      server:
+      - tfe
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAyspKk0FAI1M/P0EAAAA
+    http_version: '1.1'
+  recorded_at: Fri, 30 Mar 2012 18:25:43 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1/friendships/exists.json?user_a=nerded&user_b=dhh
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.0.0
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 30 Mar 2012 18:25:38 GMT
+      status:
+      - 200 OK
+      x-transaction:
+      - 5f14469b0c1965f2
+      x-mid:
+      - 8a29ad8c0d4c5ddfa9efb08a75099d14cee45854
+      x-ratelimit-limit:
+      - '150'
+      pragma:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - ! '"68934a3e9455fa72420237eb05902327"'
+      last-modified:
+      - Fri, 30 Mar 2012 18:25:38 GMT
+      x-transaction-mask:
+      - a6183ffa5f8ca943ff1b53b5644ef114ca49924f
+      expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      x-runtime:
+      - '0.02401'
+      x-ratelimit-class:
+      - api
+      x-ratelimit-remaining:
+      - '136'
+      x-ratelimit-reset:
+      - '1333135004'
+      x-frame-options:
+      - SAMEORIGIN
+      cache-control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      set-cookie:
+      - k=10.34.123.121.1333131938160042; path=/; expires=Fri, 06-Apr-12 18:25:38
+        GMT; domain=.twitter.com
+      - guest_id=v1%3A133313193816328045; domain=.twitter.com; path=/; expires=Mon,
+        31-Mar-2014 06:25:38 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCHUJ22Q2AToHaWQiJTY1MTdhNTAwNTg1MDVi%250ANWQwMTg5YTM4YTAzN2MyZGI5IgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--089b57159819c4f0a729a4ebf2de2d70c25d91d4;
+        domain=.twitter.com; path=/; HttpOnly
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '25'
+      server:
+      - tfe
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA0tLzClOBQAwaM0rBQAAAA==
+    http_version: '1.1'
+  recorded_at: Fri, 30 Mar 2012 18:25:44 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1/friendships/exists.json?user_a=nerded&user_b=fake_usernamexx129134
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.0.0
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      connection:
+      - close
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      date:
+      - Fri, 30 Mar 2012 18:25:39 GMT
+      status:
+      - 403 Forbidden
+      cache-control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-frame-options:
+      - SAMEORIGIN
+      expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      x-ratelimit-remaining:
+      - '135'
+      x-mid:
+      - af0948f2297df6b42f1e6802e6b5aac1792ce3a0
+      x-ratelimit-limit:
+      - '150'
+      last-modified:
+      - Fri, 30 Mar 2012 18:25:39 GMT
+      x-ratelimit-reset:
+      - '1333135004'
+      pragma:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      x-ratelimit-class:
+      - api
+      x-runtime:
+      - '0.01670'
+      x-transaction:
+      - 80fdfab9193e352e
+      set-cookie:
+      - k=10.34.123.121.1333131938995909; path=/; expires=Fri, 06-Apr-12 18:25:38
+        GMT; domain=.twitter.com
+      - guest_id=v1%3A13331319390018888; domain=.twitter.com; path=/; expires=Mon,
+        31-Mar-2014 06:25:39 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCLsM22Q2ASIKZmxhc2hJQzonQWN0aW9uQ29u%250AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoHaWQiJTdm%250AYzUwZGJiZDVmNTRlOTM3OTQ5NDFiYWFlZjc4NzU2--e0a63c20b48a5f16475922c625208f21a4f88a4a;
+        domain=.twitter.com; path=/; HttpOnly
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '137'
+      server:
+      - tfe
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAx3LTQrCMBBA4auEWbiShqobheLCawRK6kzo+DOpMwkExLtr
+        3b23+N5AqlnhBJdcH+gkF5dY0E25zM4WunJiQleN1DrYgtKrkpUfCL4PPimT
+        oM28WPDU2Ip1N8tyXsEYByFFws3/piHFO41rS3xSa/3u2O8P8PkCDpA2noUA
+        AAA=
+    http_version: '1.1'
+  recorded_at: Fri, 30 Mar 2012 18:25:44 GMT
+recorded_with: VCR 2.0.0

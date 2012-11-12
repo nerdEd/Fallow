@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: fallow_dev
+
+test: &test
+  adapter: postgresql
+  database: fallow_test
+
+production:
+  adapter: postgresql
+  database: fallow_prod
+
+cucumber:
+  <<: *test
