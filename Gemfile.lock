@@ -179,7 +179,11 @@ GEM
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
+<<<<<<< HEAD
       tilt (~> 1.1, != 1.3.0)
+=======
+      tilt (!= 1.3.0, ~> 1.1)
+>>>>>>> master
     thor (0.14.6)
     tilt (1.3.3)
     timecop (0.3.5)
